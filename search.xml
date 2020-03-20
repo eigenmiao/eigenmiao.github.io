@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>article-08</title>
+      <link href="/2020/03/20/article-08/"/>
+      <url>/2020/03/20/article-08/</url>
+      
+        <content type="html"><![CDATA[<p>标题：One-Dimensional van der Waals Heterostructures<br>作者：Rong Xiang, Taiki Inoue, Yongjia Zheng, Akihito Kumamoto, Yang Qian, Yuta Sato, Ming Liu, Daiming Tang, Devashish Gokhale, Jia Guo, Kaoru Hisama, Satoshi Yotsumoto, Tatsuro Ogamoto, Hayato Arai, Yu Kobayashi, Hao Zhang, Bo Hou, Anton Anisimov, Mina Maruyama, Yasumitsu Miyata, Susumu Okada, Shohei Chiashi, Yan Li, Jing Kong, Esko I. Kauppinen, Yuichi Ikuhara, Kazu Suenaga and Shigeo Maruyama<br>期刊：Science<br>日期：2020</p><a id="more"></a><p>简介：这是一篇关于范德华异质结的文献，标题为“一维范德华异质结”。大致翻译了一下，翻译仅供参考，请以原文为准。如翻译有不妥之处，欢迎一起讨论。</p><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><blockquote><p>We present the experimental synthesis of one-dimensional (1D) van der Waals heterostructures, a class of materials where different atomic layers are coaxially stacked. We demonstrate the growth of single-crystal layers of hexagonal boron nitride (BN) and molybdenum disulfide (MoS<sub>2</sub>) crystals on single-walled carbon nanotubes (SWCNTs). For the latter, larger-diameter nanotubes that overcome strain effect were more readily synthesized. We also report a 5-nanometer–diameter heterostructure consisting of an inner SWCNT, a middle three-layer BN nanotube, and an outer MoS<sub>2</sub> nanotube. Electron diffraction verifies that all shells in the heterostructures are single crystals. This work suggests that all of the materials in the current 2D library could be rolled into their 1D counterparts and a plethora of function-designable 1D heterostructures could be realized.</p></blockquote><p>作者提出了一维（one-dimensional，1D）范德华（van der Waals）异质结的实验合成方法，这种异质结是一类不同原子层共轴堆积的材料。作者展示了在单壁碳纳米管（single-walled carbon nanotube，SWCNT）上生长六角氮化硼（hexagonal boron nitride，BN）和二硫化钼（MoS<sub>2</sub>）单晶体层的过程。对于后者而言，它更容易克服应变效应从而合成大直径纳米管。作者还报道了一种由内部 SWCNT、中间三层 BN 纳米管和外部 MoS<sub>2</sub> 纳米管组成的直径达 5 纳米的异质结。通过电子衍射可以验证异质结中所有的壳层都是单晶。这项工作表明，2D 数据库中所有的材料都可以卷成 1D 材料，由此可以实现大量的功能可设计的 1D 异质结。</p><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote><p>The demonstration of two-dimensional (2D) van der Waals (vdW) heterostructures<sup>[1–3]</sup>—in which atomic layers are stacked on each other and different 2D crystals are combined beyond symmetry and latticematching—represents a way ofmanipulating crystals to enable both the exploration of physics not observable in conventionalmaterials and device applications.<sup>[4–8]</sup> These 2D heterostructures have been fabricated by transferring preprepared layers (transfer approach)<sup>[5, 9]</sup> or by synthesizing layers onto a base layer (synthesis approach).<sup>[10]</sup> Whether such artificial materials and interfaces can be fabricated in other dimensions remains an open question. In 1D materials, for example, an ideal vdW heterostructure would be a coaxial structure with different types of nanotubes. Such ideal structures have been investigated in theoretical studies<sup>[11, 12]</sup> and would appear to require a synthesis approach. However, experimental attempts to fabricate coaxial nanotube structures have yielded only amorphous or very poorly crystallized coatings.<sup>[13, 14]</sup></p></blockquote><blockquote><p>We demonstrate the experimental discovery and controlled fabrication of true 1D vdW heteronanotubes. A typical structure was $4$ to $5\ \rm{nm}$ in diameter but contained three different shells: an inner carbon nanotube (CNT), amiddle hexagonal boron nitride nanotube (BNNT), and an outer molybdenum disulfide (MoS<sub>2</sub>) nanotube. Electron diffraction (ED) and many other characterizations were used to confirm that each shell in this structure was a seamless, perfect nanotube that realized the heteronanotubes studied in theoretical models. The heterostructures formed through an open-end growth mode that has rarely been observed in previous 1D nanostructure growth. We outline some basic geometric principles that governed the formation of these 1D vdW heterostructure nanotubes, including the absence of structural correlation between inner and outer shells and the requirement of a threshold diameter for MoS<sub>2</sub> nanotubes.</p></blockquote><blockquote><p>In this study, the base structure, a singlewalled carbon nanotube (SWCNT),<sup>[15]</sup> was chosen as the starting material for several reasons. It is, so far, the best-studied 1D material and can be synthesized in many controlled geometries. Also, a SWCNT can be metallic or semiconducting, whichmeans it could serve as the electrode or channel material for a heteronanotube device. The typical SWCNTs used in this study were $1$ to $2\ \rm{nm}$ in diameter and a few micrometers in length and were self-suspended as a randomnetwork.<sup>[16]</sup> Schematics comparing the 2D and 1D vdW heterostructures are presented in Fig. 1, A and B.</p></blockquote><h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><blockquote><p>We have extended the concept of vdW heterostructures to 1D materials. In these coaxial heteronanotubes, both cores and shells are single crystalline and form a seamless structure. We showed the controlled fabrication of SWCNT-BNNT and SWCNT-BNNT-MoS<sub>2</sub> coaxial structures with diameters $\lt 5\ \rm{nm}$. We also developed some basic rules governing the fabrication of 1D heterostructures, including the absence of shell-shell epitaxial structure correlation and the requirement of a threshold diameter for MoS<sub>2</sub> nanotubes. This approach is likely extendable to other layered materials<sup>[35–37]</sup> and yields a large number of combinations, and 1D vdW heterostructures could host distinctive physics arising from curvature and diameter confinement.</p></blockquote><p>作者将 vdW 异质结的概念扩展到了 1D 材料。在这些同轴异质纳米管中，核和壳都是单晶并形成一个无缝的结构。作者展示了直径 $\lt 5\ \rm{nm}$ 的 SWCNT-BNNT 和 SWCNT-BNNT-MoS<sub>2</sub> 同轴结构的可控合成方法。作者也发展了一些控制 1D 异质结合成的基本规则，包括缺失壳-壳外延结构的关系，以及对 MoS<sub>2</sub> 纳米管阈值直径的要求。这种方法有可能扩展到其他的层状材料中<sup>[35–37]</sup>并产生多种组合方式，同时 1D vdW 异质结可能伴随有由曲率和直径限制引起的独特物理现象。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 翻译 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 文献 </tag>
+            
+            <tag> 范德华异质 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>文献阅读：07</title>
       <link href="/2020/03/15/article-07/"/>
       <url>/2020/03/15/article-07/</url>
