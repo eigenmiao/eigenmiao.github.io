@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="文献阅读：04"><meta name="keywords" content="文献,密度泛函理论,势垒晶体管,肖特基接触"><meta name="author" content="本征喵,eigenmiao@outlook.com"><meta name="copyright" content="本征喵"><title>文献阅读：04 | 本征喵的小站</title><link rel="shortcut icon" href="https://gitee.com/eigenmiao/rtos/raw/master/webp/143c54707674528dfb89ae1c4c1afd3c.webp"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://hm.baidu.com"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?85cbedcec4cd94e719fa5367b345fa13";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><script src="/myjs/opacity.js"></script><meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body onscroll="muscrolling()"><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">2.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图表"><span class="toc-number">3.</span> <span class="toc-text">图表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结论"><span class="toc-number">4.</span> <span class="toc-text">结论</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://gitee.com/eigenmiao/rtos/raw/master/webp/d5eebf6397f4d0608fd88fe0210175b5.webp"></div><div class="author-info__name text-center">本征喵</div><div class="author-info__description text-center">在读研究生一枚</div><div class="follow-button"><a href="https://github.com/liujiacode" target="_blank" rel="noopener">关注</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">10</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">24</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">2</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gitee.com/eigenmiao/rtos/raw/master/webp/077cb541f32d20485efeec34a5362db0.webp)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">本征喵的小站</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">文献阅读：04</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-03-11</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E7%BF%BB%E8%AF%91/">翻译</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">2.8k</span><span class="post-meta__separator">|</span><span>阅读时长: 11 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>标题：Theoretical Demonstration of the Ionic Barristor<br>作者：Yifan Nie, Suklyun Hong, Robert M. Wallace and Kyeongjae Cho<br>期刊：Nano Letters<br>日期：2019</p>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><a id="more"></a>
+
+<p>简介：这是一篇关于晶体管的文献，标题为“离子势垒晶体管的理论证明”。大致翻译了一下，翻译仅供参考，请以原文为准。如翻译有不妥之处，欢迎一起讨论。</p>
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><blockquote>
+<p>In this Letter, we use first-principles simulations to demonstrate the absence of Fermi-level pinning when graphene is in contact with transition metal dichalcogenides (TMDs). We find that formation of either an ohmic or Schottky contact is possible. Then we show that, due to the shallow density of states around its Fermi level, the work function of graphene can be tuned by ion adsorption. Finally we combine work function tuning of graphene and an ideal contact between graphene and TMDs to propose an ionic barristor design that can tune the work function of graphene with a much wider margin than current barristor designs, achieving a dynamic switching among p-type ohmic contact, Schottky contact, and n-type ohmic contact in one device.</p>
+</blockquote>
+<p>在这封快报中，作者使用第一原理模拟来证明，当石墨烯与过渡金属二硫化物（transition metal dichalcogenide，TMD）接触时没有费米能级钉扎（Fermi level pinning）。作者发现形成欧姆接触或肖特基接触都是可能的。结果表明，由于石墨烯费米能级附近的态密度较浅，我们可以通过离子吸附来调节石墨烯的功函数。最后，作者结合石墨烯功函数的调节以及石墨烯与 TMD 之间的理想接触，提出了一种离子势垒晶体管的设计方案，它可以在比现有势垒晶体管设计宽得多的范围内对石墨烯的功函数进行调节，实现在 p 型欧姆接触、肖特基接触和 n 型欧姆接触之间的动态转换的一个器件。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>Single layered transition-metal dichalcogenides (TMDs) have received great research attention because of their outstanding mechanical and electrical properties which show great potential in transistor engineering.<sup>[1,2]</sup> However, recent device studies have found that real devices behaviors are far inferior to the theoretical expectations.<sup>[1,3,4]</sup> One of the major limiting aspects of the device performance is the contact between metal and the TMD, which is very sensitive to scaling.<sup>[4]</sup> It has been confirmed by both experimental<sup>[5−8]</sup> and theoretical<sup>[4,9−11]</sup> studies that a partial Fermi level pinning exists between the metal and the TMD, which will always pin the work function of metals to the gap states of TMDs induced by a metal-TMD interaction, resulting in high contact resistance and inability to establish p-type contact.</p>
+</blockquote>
+<p>单层过渡金属二硫化物（TMD）因其优异的力学和电学性能并在晶体管工程中显示出巨大的潜力而得到了广泛的研究和关注<sup>[1,2]</sup>。然而，最近的器件研究发现，实际器件的性能远远低于理论预期<sup>[1,3,4]</sup>。限制器件性能的主要因素之一是金属与 TMD 之间的接触对尺寸范围非常敏感<sup>[4]</sup>。实验<sup>[5−8]</sup>和理论<sup>[4,9−11]</sup>都证实了金属与 TMD 之间存在部分费米能级钉扎现象。由于金属与 TMD 之间的相互作用，钉扎效应总是将金属的功函数固定在 TMD 的间隙态位置，导致接触电阻过高，无法建立 p 型接触。</p>
+<blockquote>
+<p>Previous theoretical studies have revealed the cause of the partial Fermi level pinning.<sup>[9,10]</sup> Apart from extrinsic and material imperfection (intrinsic defects) reasons, the cause of such partial Fermi level pinning lies in the charge transfer and chemical bonding at the interface resulting in metal work function modification and interface gap state formation. The high reactivity of the dangling bonds on metal surface causes strong orbital overlapping and hybridization between states of chalcogen and metal atoms on the surface, resulting in semicovalent or covalent bonds.<sup>[9]</sup></p>
+</blockquote>
+<p>先前的理论研究已经揭示了部分费米能级钉扎的原因<sup>[9,10]</sup>。除了外部和材料缺陷（内部缺陷）的原因外，界面电荷转移和化学键导致的金属功函数的改变和界面间隙态的形成同样会造成这种部分费米能级钉扎。金属表面上悬挂键具有较高的反应活性，导致表面上的硫族元素和金属原子之间有较强的轨道重叠和杂化，形成半共价键或共价键<sup>[9]</sup>。</p>
+<blockquote>
+<p>Graphene, another 2D material in the spotlight, possesses semimetallic electric properties and molecular mechanical properties.<sup>[12,13]</sup> Graphene has strong bonding in only two dimensions, which behaves similarly to the TMDs family. In absence of interlayer dangling bonds, graphene can form weak interlayer bonding with TMD compared to metal, thus providing a compatible and therefore less reactive interface. If this assumption is true, the Fermi level of graphene will not be modified by the contact and thus partial Fermi level pinning will not happen. In this case, as the work function of graphene is above the conduction band edge of group 4 TMD such as ZrS<sub>2</sub>,<sup>[14]</sup> an n-type ohmic contact should be observed for the graphene−ZrS<sub>2</sub> interface. As the Fermi level of graphene lies in the middle of the band gap for both MoS<sub>2</sub> and WSe<sub>2</sub>, they will form a Schottky contact when brought into contact.</p>
+</blockquote>
+<p>石墨烯是另一种备受关注的 2D 材料，它同时具有半金属电子性能和分子级的力学性能<sup>[12,13]</sup>。与 TMD 系列材料类似，石墨烯仅在两个维度上具有较强的化学键结合。与金属相比，在没有层间悬挂键的情况下，石墨烯可以与 TMD 形成弱的层间连接，从而提供一个相容的，并因此反应活性较小的界面。如果这个假设成立，接触将不会改变石墨烯的费米能级，因此不会发生部分费米能级钉扎。在这种情况下，由于石墨烯的功函数高于第 IV 副族 TMD，如 ZrS<sub>2</sub><sup>[14]</sup> 的导带边缘，石墨烯-ZrS<sub>2</sub> 的界面应该能够形成 n 型欧姆接触。由于石墨烯的费米能级均位于 MoS<sub>2</sub> 和 WSe<sub>2</sub> 的带隙中间，它们在接触时将会形成肖特基接触。</p>
+<blockquote>
+<p>The “barristor” is a novel device structure that makes use of the Schottky contact.<sup>[15]</sup> Different from traditional Schottky field effect transistors, which fix the Schottky barrier height and function by tuning the thickness of the Schottky barrier and hence controlling tunneling current,<sup>[16]</sup> barristors change the Schottky barrier height to achieve logic functionality. Graphene, being a single layered material, has a far lower density of states compared to metals. Thus, the graphene work function is very susceptible to a wide variety of tuning methods<sup>[12,13]</sup> and is typically chosen to play the metal contact role in barristor designs. The tuning methods include static field effect,<sup>[15,17]</sup> ionic liquid polarization,<sup>[18]</sup> and so forth. The tuning margin of current barristor designs is about $0.2 \rm{eV}$.</p>
+</blockquote>
+<p>“势垒晶体管（barristor）”是一种利用肖特基接触的新型器件结构<sup>[15]</sup>。不同于传统肖特基场效应晶体管，即通过固定肖特基势垒的高度，调节肖特基势垒的厚度从而控制隧穿电流<sup>[16]</sup>，势垒晶体管通过改变肖特基势垒的高度来实现逻辑功能。石墨烯是一种单层材料，其态密度远低于金属。石墨烯功函数非常容易受到各种调谐方法的影响<sup>[12,13]</sup>，因此，在设计势垒晶体管时通常选择石墨烯作为金属接触。调节方法包括静态场效应<sup>[15,17]</sup>、离子液体极化<sup>[18]</sup>等。当前势垒晶体管设计的调节极限大约为 $0.2 \rm{eV}$。</p>
+<blockquote>
+<p>In this paper we use first-principles calculations with density functional theory to study the contact behavior of graphene and TMD, in which we show that no gap state is formed and hence there is no Fermi level pinning between TMD and graphene. As typical semiconducting TMDs, MoS<sub>2</sub>, and WSe<sub>2</sub> are chosen because they show the most promising potential for transistor applications and hence have been studied most actively. ZrS<sub>2</sub> is also chosen to further demonstrate the absence of any kind of Fermi level pinning, because it is predicted to have ohmic contact with graphene.<sup>[10]</sup> Then we show that by inducing Li atoms or PF<sub>6</sub> groups onto graphene, the work function of graphene may be tuned up and down to a very wide margin, without substantial changes to its band structure. Such a wide range can enable graphene to establish both n-type and p-type ohmic contact with a variety of semiconductors. Finally we use the graphene−TMD system as an example to propose a design of an ionic barristor. By exploiting the reversible nature of ionic adsorption and desorption, one side of graphene is used to form a high quality contact with the TMD, and the other side is used to reversibly tune the work function of graphene to establish and break an ohmic contact, realizing logic functionality.</p>
+</blockquote>
+<p>这篇文章利用第一性原理计算和密度泛函理论研究了石墨烯与 TMD 的接触行为。结果表明，TMD 与石墨烯之间不会形成间隙态，因而不存在费米能级钉扎现象。作为典型的半导体 TMD，MoS<sub>2</sub> 和 WSe<sub>2</sub> 在晶体管应用中显现出了最有希望的潜力，并因此得到了最为广泛的研究。有人预测 ZrS<sub>2</sub> 能够与石墨烯之间形成欧姆接触<sup>[10]</sup>，因此作者同样也选择了 ZrS<sub>2</sub> 来进一步说明它们之间没有任何费米能级钉扎现象。随后作者展示了通过在石墨烯上引入锂原子或者 PF<sub>6</sub> 基团，石墨烯的功函数可以上下调整到很宽的范围，而它的能带结构却不会发生实质性改变。如此大的范围可以使石墨烯与各种半导体形成 n 型或者 p 型欧姆接触。最后，作者以石墨烯-TMD 体系为例，提出了一种离子势垒晶体管的设计方案。利用离子吸附和脱附的可逆性，石墨烯的一侧可以用以与 TMD 形成高质量的接触，同时另一侧用来可逆地调节其功函数，从而建立或者破坏欧姆接触，实现逻辑功能。</p>
+<h1 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h1><div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/ec7bb39898a48b1e2121753490049ec5.webp' data-briefinfo='<div>
+图 1
+</div>' alt='<div><q>
+<b>Figure 1</b>. A typical super cell used in this study (green: Li, brown: C, yellow: S, and mauve: Mo).
+</q></div><div>
+<b>图 1</b>. 本研究中使用的典型超胞（绿色：Li，棕色：C，黄色：S，紫红色：Mo）。
+</div>' width='100%'></img>
+</div><br/>
+
+<div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/b919471983591c6bbcac5c1fd782be5a.webp' data-briefinfo='<div>
+图 2
+</div>' alt='<div><q>
+<b>Figure 2</b>. Fermi level of graphene before and after strain, and band edges of the monolayer TMDs used in this study, in isolation. The possible tuning range of the graphene Fermi level is shown by the shaded column.
+</q></div><div>
+<b>图 2</b>. 应变前后石墨烯的费米能级，以及本研究中使用的单层 TMD 的能带边缘。阴影柱条显示的是石墨烯费米能级可能的调节范围。
+</div>' width='100%'></img>
+</div><br/>
+
+<div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/1aa2eaeecabcb5a2b39144f4633d5aa9.webp' data-briefinfo='<div>
+图 3
+</div>' alt='<div><q>
+<b>Figure 3</b>. Change of the band offsets when a layer of graphene approaches MoS<sub>2</sub> (a) and WSe<sub>2</sub> (b).
+</q></div><div>
+<b>图 3</b>. 当一层石墨烯接近 MoS<sub>2</sub>（a）和 WSe<sub>2</sub>（b）时能带偏移量的变化。
+</div>' width='100%'></img>
+</div><br/>
+
+<div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/a4484994d7f1eecb3b03d8f03e4c82af.webp' data-briefinfo='<div>
+图 4
+</div>' alt='<div><q>
+<b>Figure 4</b>. Band structures of (a) monolayer graphene, (b) monolayer MoS<sub>2</sub>, (c) graphene in contact with MoS<sub>2</sub>, (d) graphene in contact with WSe<sub>2</sub>, and (e) graphene in contact with ZrS<sub>2</sub>. In the figures, the $y$-axis is the energy offsets in $\rm{eV}$ relative to the system’s Fermi level. Black dotted lines are the states that carbon atoms provide major contribution. The weight is represented by dot sizes.
+</q></div><div>
+<b>图 4</b>.（a）单层石墨烯，（b）单层 MoS<sub>2</sub>，（c）与 MoS<sub>2</sub> 接触的石墨烯，（d）与 WSe<sub>2</sub> 接触的石墨烯和（e）与 ZrS<sub>2</sub> 接触的石墨烯的能带结构。在图中，$y$ 轴是相对于系统费米能级的能量偏移量，单位为 $\rm{eV}$。黑色虚线是由碳原子贡献的态。点的大小表示权重。
+</div>' width='100%'></img>
+</div><br/>
+
+<div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/3f8654ada3eeb9e531b0d24b46a49677.webp' data-briefinfo='<div>
+图 5
+</div>' alt='<div><q>
+<b>Figure 5</b>. Energy diagram for the Fermi level of graphene, strained graphene to match the TMD lattice constant, the valence and conduction band edges of TMDs (a. MoS<sub>2</sub>, b. WSe<sub>2</sub>, c. ZrS<sub>2</sub>) and the contact systems. Energy levels are measured from the vacuum level ($E = 0$).
+</q></div><div>
+<b>图 5</b>. 石墨烯以及与 TMD 晶格常数相匹配的应变石墨烯的费米能级、TMD（a. MoS<sub>2</sub>、b. WSe<sub>2</sub>、c. ZrS<sub>2</sub>）和接触体系的带边位置构成的能级匹配示意图。能量是以真空能级为基准测量的（$E = 0$）。
+</div>' width='100%'></img>
+</div><br/>
+
+<div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/7febed76c5368db1046ab6860421f25f.webp' data-briefinfo='<div>
+图 6
+</div>' alt='<div><q>
+<b>Figure 6</b>. Fermi level of graphene doped with different concentration of Li atom or PF<sub>6</sub> group.
+</q></div><div>
+<b>图 6</b>. 掺杂不同浓度的锂原子或者 PF<sub>6</sub> 基团后石墨烯的费米能级。
+</div>' width='100%'></img>
+</div><br/>
+
+<div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/33da13ed51136c27d98d66a04af5a580.webp' data-briefinfo='<div>
+图 7
+</div>' alt='<div><q>
+<b>Figure 7</b>. Band structures of the combined system of (a) Li-doped graphene and MoS<sub>2</sub>, (b) PF<sub>6</sub>-doped graphene and MoS<sub>2</sub>, (c) Li-doped graphene and WSe<sub>2</sub>, and (d) PF<sub>6</sub>-doped graphene and WSe<sub>2</sub>. In all four cases, an ohmic contact, n-type for a and c, p-type for b and d are predicted.
+</q></div><div>
+<b>图 7</b>.（a）锂掺杂的石墨烯与 MoS<sub>2</sub>，（b）PF<sub>6</sub> 掺杂的石墨烯与 MoS<sub>2</sub>，（c）锂掺杂的石墨烯与 WSe<sub>2</sub>，（d）PF<sub>6</sub> 掺杂石墨烯与 WSe<sub>2</sub> 组合体系的能带结构。在这四种情况下，可以预测 a 和 c 体系为 n 型欧姆接触，而 b 和 d 体系为 p 型欧姆接触。
+</div>' width='100%'></img>
+</div><br/>
+
+<div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/69df80864540fc2b962785f0aaa561fb.webp' data-briefinfo='<div>
+图 8
+</div>' alt='<div><q>
+<b>Figure 8</b>. Device structure of the ionic barristor. (a) The topologicalal structure of a standalone ionic barristor, (b) circuit design for the ionic barristor, (c) an example of an ionic barristor integrated in the source site of a TMD based TFET.
+</q></div><div>
+<b>图 8</b>. 离子势垒晶体管的器件结构。（a）一个独立的离子势垒晶体管的拓扑结构，（b）离子势垒晶体管的电路设计图，（c）一个集成在基于 TMD 的 TFET 源端的离子势垒晶体管的例子。
+</div>' width='100%'></img>
+</div><br/>
+
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><blockquote>
+<p>In conclusion, we have demonstrated separately that Fermi level pinning is absent between TMD and graphene and that ion adsorption is able to change the work function of graphene from $3.30$ to $6.18 \rm{eV}$. Then by putting them in contact, we have shown that both n-type and p-type ohmic contact can be achieved by tuning the work function of graphene with ion adsorption. Then we proposed a design of the ionic barristor, which can be switched among three states, being off (Schottky contact), n-type ohmic contact and p-type ohmic contact. This Fermi level “unpinning” phenomenon between graphene and the TMD is due to the van der Waals interaction between them. In this sense, the Fermi level of graphene is not pinned to all other families of semiconductors that interact only weakly with graphene, in addition to the TMDs. This predicted ohmic contact between metals and semiconductors in contact with only van der Waals interaction is subject to experimental demonstration and its applications are open to a limitless possibility of creative device designs.</p>
+</blockquote>
+<p>综上所述，我们分别证明了 TMD 和石墨烯之间没有费米能级钉扎，并且离子吸附能够将石墨烯的功函数从 $3.30$ 改变到 $6.18 \rm{eV}$。通过将它们接触在一起，作者发现通过离子吸附调节石墨烯的功函数，可以实现 n 型和 p 型欧姆接触。随后，作者提出了一种可在关断（肖特基接触）、n 型欧姆接触和 p 型欧姆接触三种状态之间切换的离子势垒晶体管的设计方案。这种石墨烯与 TMD 之间的费米能级“不钉扎”现象是由于它们之间的范德华相互作用造成的。从这个意义上说，除了 TMD 外，石墨烯的费米能级也不会钉扎在与石墨烯仅有弱相互作用的其他系列的半导体。这种预测的欧姆接触在金属和半导体之间仅有范德华相互作用，这个预测有待于实验证明，但其在创造性器件设计中的应用是无限可能的。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:eigenmiao@outlook.com">本征喵</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://eigenmiao.site/2020/03/11/article-04/">https://eigenmiao.site/2020/03/11/article-04/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://eigenmiao.site">本征喵的小站</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%96%87%E7%8C%AE/">文献</a><a class="post-meta__tags" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/">密度泛函理论</a><a class="post-meta__tags" href="/tags/%E5%8A%BF%E5%9E%92%E6%99%B6%E4%BD%93%E7%AE%A1/">势垒晶体管</a><a class="post-meta__tags" href="/tags/%E8%82%96%E7%89%B9%E5%9F%BA%E6%8E%A5%E8%A7%A6/">肖特基接触</a></div><div class="social-share pull-right"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/12/article-05/"><i class="fa fa-chevron-left">  </i><span>文献阅读：05</span></a></div><div class="next-post pull-right"><a href="/2020/03/10/article-03/"><span>文献阅读：03</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'true' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+var localeName = 'my-own'
+var localeMode = {head:{nick:"姓名",mail:"邮箱",link:"个人主页"},tips:{comments:"评论",sofa:"快来做第一个评论的人吧 ~",busy:"还在提交中，请稍候 ...",again:" 这么简单也能错，也是没谁了"},ctrl:{reply:"回复",ok:"好的",sure:"确认",cancel:"取消",confirm:"确认",continue:"继续",more:"查看更多 ...",try:"重试",preview:"预览",emoji:"表情"},error:{99:"初始化失败，错误 1001。请联系管理员。",100:"初始化失败，错误 1002。请联系管理员。",401:"未经授权的操作，错误 1003。请联系管理员。",403:"未经授权的操作，错误 1004。请联系管理员。"},timeago:{seconds:"秒前",minutes:"分钟前",hours:"小时前",days:"天前",now:"刚刚"}}
+
+window.valine = new Valine();
+window.valine.installLocale(localeName,localeMode);
+
+window.valine.init({
+  el:'#vcomment',
+  notify:false,
+  verify:true,
+  appId:'sVhWBkYRKiYJotRtiVEP9BWA-MdYXbMMI',
+  appKey:'3Kpj3Sgp6egjsyhsg5t8C4Cz',
+  placeholder:'说点什么吧 (●´∀｀●)',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'my-own'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2020 By 本征喵</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>

@@ -1,0 +1,1019 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="常用资料书汇总"><meta name="keywords" content="密度泛函理论,量子输运,固体物理,科技论文写作"><meta name="author" content="本征喵,eigenmiao@outlook.com"><meta name="copyright" content="本征喵"><title>常用资料书汇总 | 本征喵的小站</title><link rel="shortcut icon" href="https://gitee.com/eigenmiao/rtos/raw/master/webp/143c54707674528dfb89ae1c4c1afd3c.webp"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://hm.baidu.com"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?85cbedcec4cd94e719fa5367b345fa13";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><script src="/myjs/opacity.js"></script><meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body onscroll="muscrolling()"><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#清单"><span class="toc-number">1.</span> <span class="toc-text">清单</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一百本第一性原理经典工具书"><span class="toc-number">1.1.</span> <span class="toc-text">一百本第一性原理经典工具书</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#书籍"><span class="toc-number">2.</span> <span class="toc-text">书籍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Density-Functional-Theory"><span class="toc-number">2.1.</span> <span class="toc-text">Density Functional Theory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#密度泛函理论"><span class="toc-number">2.2.</span> <span class="toc-text">密度泛函理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#固体与表面"><span class="toc-number">2.3.</span> <span class="toc-text">固体与表面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#讲义"><span class="toc-number">3.</span> <span class="toc-text">讲义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quantum-Transport-in-Electron-Devices-and-Novel-Materials"><span class="toc-number">3.1.</span> <span class="toc-text">Quantum Transport in Electron Devices and Novel Materials</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#固体-DFT-计算-SCF-参数设置入门"><span class="toc-number">3.2.</span> <span class="toc-text">固体 DFT 计算 SCF 参数设置入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#器件体系的建模与计算"><span class="toc-number">3.3.</span> <span class="toc-text">器件体系的建模与计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-QuantumATK-研究电子输运"><span class="toc-number">3.4.</span> <span class="toc-text">使用 QuantumATK 研究电子输运</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#石墨烯纳米带器件：电性质"><span class="toc-number">3.5.</span> <span class="toc-text">石墨烯纳米带器件：电性质</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#手册"><span class="toc-number">4.</span> <span class="toc-text">手册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#VASP-the-Guide"><span class="toc-number">4.1.</span> <span class="toc-text">VASP the Guide</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#High-Throughput-Electronic-Band-Structure-Calculations-Challenges-and-Tools"><span class="toc-number">4.2.</span> <span class="toc-text">High-Throughput Electronic Band Structure Calculations: Challenges and Tools</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Writing-a-Scientific-Paper"><span class="toc-number">4.3.</span> <span class="toc-text">Writing a Scientific Paper</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://gitee.com/eigenmiao/rtos/raw/master/webp/d5eebf6397f4d0608fd88fe0210175b5.webp"></div><div class="author-info__name text-center">本征喵</div><div class="author-info__description text-center">在读研究生一枚</div><div class="follow-button"><a href="https://github.com/liujiacode" target="_blank" rel="noopener">关注</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">10</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">24</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">2</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gitee.com/eigenmiao/rtos/raw/master/webp/077cb541f32d20485efeec34a5362db0.webp)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">本征喵的小站</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">常用资料书汇总</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-02-21</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%B5%84%E6%96%99/">资料</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.5k</span><span class="post-meta__separator">|</span><span>阅读时长: 5 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>一些关于密度泛函理论、固体物理、量子输运和科技论文写作等方面的书籍、讲义和手册，汇总在一起，方便以后学习和查阅。<br>以下资料版权归其作者和出版社（或网站）所有，仅供学习使用。<br>不定期更新。</p>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><a id="more"></a>
+
+<h1 id="清单"><a href="#清单" class="headerlink" title="清单"></a>清单</h1><h2 id="一百本第一性原理经典工具书"><a href="#一百本第一性原理经典工具书" class="headerlink" title="一百本第一性原理经典工具书"></a>一百本第一性原理经典工具书</h2><ul>
+<li>来源：<a href="http://muchong.com/t-13802807-1" target="_blank" rel="noopener">小木虫</a></li>
+<li>日期：2019</li>
+<li>下载：<a href="https://pan.baidu.com/s/1cUNI_EEMJJwK0H9hkogd2g" target="_blank" rel="noopener">点击下载工具书清单</a>（提取码：3668）</li>
+</ul>
+<h1 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h1><p>注意：以下资源可能由于文件大小的限制无法预览，这些文件大部分在<a href="#一百本第一性原理经典工具书">工具书清单</a>中都可找到。</p>
+<h2 id="Density-Functional-Theory"><a href="#Density-Functional-Theory" class="headerlink" title="Density Functional Theory"></a>Density Functional Theory</h2><ul>
+<li>语言：英文</li>
+<li>作者：David S. Sholl 和 Janice A. Steckel</li>
+<li>出版：John Wiley &amp; Sons, Inc</li>
+<li>日期：2009</li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>What Is Density Functional Theory?</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DFT Calculations for Simple Solids</td>
+<td>35</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Nuts and Bolts of DFT Calculations</td>
+<td>49</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DFT Calculations for Surfaces of Solids</td>
+<td>83</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DFT Calculations of Vibrational Frequencies</td>
+<td>113</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Calculating Rates of Chemical Processes Using Transition State Theory</td>
+<td>131</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Equilibrium Phase Diagrams from Ab Initio Thermodynamics</td>
+<td>163</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Electronic Structure and Magnetic Properties</td>
+<td>179</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Ab Initio Molecular Dynamics</td>
+<td>193</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Accuracy and Methods beyond “Standard” Calculations</td>
+<td>209</td>
+</tr>
+<tr>
+<td></td>
+<td>Index</td>
+<td>235</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/density_functional_theory_basic.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h2 id="密度泛函理论"><a href="#密度泛函理论" class="headerlink" title="密度泛函理论"></a>密度泛函理论</h2><ul>
+<li>语言：中文翻译</li>
+<li>作者：David S. Sholl 和 Janice A. Steckel</li>
+<li>译者：李健、周勇</li>
+<li>出版：国防工业出版社</li>
+<li>日期：2014</li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>何谓密度泛函理论？</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>简单固体的 DFT 计算</td>
+<td>34</td>
+</tr>
+<tr>
+<td>3</td>
+<td>DFT 计算的基本要素</td>
+<td>48</td>
+</tr>
+<tr>
+<td>4</td>
+<td>固体表面的 DFT 计算</td>
+<td>83</td>
+</tr>
+<tr>
+<td>5</td>
+<td>振动频率的计算</td>
+<td>115</td>
+</tr>
+<tr>
+<td>6</td>
+<td>使用过渡态理论计算化学过程速率</td>
+<td>134</td>
+</tr>
+<tr>
+<td>7</td>
+<td>基于 Ab Initio 热力学的平衡相图</td>
+<td>167</td>
+</tr>
+<tr>
+<td>8</td>
+<td>电子结构和磁特性</td>
+<td>182</td>
+</tr>
+<tr>
+<td>9</td>
+<td>从头算分子动力学</td>
+<td>197</td>
+</tr>
+<tr>
+<td>10</td>
+<td>精确度及“标准”计算以外的其他方法</td>
+<td>213</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/density_functional_theory_zh.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h2 id="固体与表面"><a href="#固体与表面" class="headerlink" title="固体与表面"></a>固体与表面</h2><ul>
+<li>语言：中文翻译</li>
+<li>作者：Roald Hoffmann</li>
+<li>译者：郭洪猷、李静</li>
+<li>出版：化学工业出版社</li>
+<li>日期：1988</li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>导论</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td>轨道和一维体系能带</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Bloch 函数，k，能带结构</td>
+<td>6</td>
+</tr>
+<tr>
+<td></td>
+<td>能带宽带</td>
+<td>8</td>
+</tr>
+<tr>
+<td></td>
+<td>能带如何伸展</td>
+<td>9</td>
+</tr>
+<tr>
+<td></td>
+<td>Pt（I）平面四方型络合物的重叠堆积</td>
+<td>10</td>
+</tr>
+<tr>
+<td></td>
+<td>Fermi 能级</td>
+<td>15</td>
+</tr>
+<tr>
+<td></td>
+<td>维数较多，至少二维的体系</td>
+<td>16</td>
+</tr>
+<tr>
+<td></td>
+<td>表面问题的提出</td>
+<td>22</td>
+</tr>
+<tr>
+<td></td>
+<td>态密度</td>
+<td>26</td>
+</tr>
+<tr>
+<td></td>
+<td>电子在何处？</td>
+<td>32</td>
+</tr>
+<tr>
+<td></td>
+<td>分子-表面相互作用过程的探讨：DOS 分解</td>
+<td>37</td>
+</tr>
+<tr>
+<td></td>
+<td>键在何处？</td>
+<td>43</td>
+</tr>
+<tr>
+<td></td>
+<td>一个固体实例：ThCr2Si2 的结构</td>
+<td>55</td>
+</tr>
+<tr>
+<td></td>
+<td>前线轨道概念</td>
+<td>66</td>
+</tr>
+<tr>
+<td></td>
+<td>表面上的轨道相互作用</td>
+<td>68</td>
+</tr>
+<tr>
+<td></td>
+<td>一个研究实例：Ni（100）面上的 CO</td>
+<td>71</td>
+</tr>
+<tr>
+<td></td>
+<td>化学吸附势垒</td>
+<td>74</td>
+</tr>
+<tr>
+<td></td>
+<td>化学吸附是一种折衷效应</td>
+<td>75</td>
+</tr>
+<tr>
+<td></td>
+<td>三维扩展结构中的前线轨道</td>
+<td>78</td>
+</tr>
+<tr>
+<td></td>
+<td>含多于一个电子单元的单胞，能带折叠</td>
+<td>83</td>
+</tr>
+<tr>
+<td></td>
+<td>晶体中的成键</td>
+<td>92</td>
+</tr>
+<tr>
+<td></td>
+<td>Peierls 畸变</td>
+<td>93</td>
+</tr>
+<tr>
+<td></td>
+<td>三维体系概述</td>
+<td>104</td>
+</tr>
+<tr>
+<td></td>
+<td>表面上轨道相互作用的定性解释</td>
+<td>109</td>
+</tr>
+<tr>
+<td></td>
+<td>Fermi 能级问题</td>
+<td>112</td>
+</tr>
+<tr>
+<td></td>
+<td>另一种方法论及其他人的贡献</td>
+<td>120</td>
+</tr>
+<tr>
+<td></td>
+<td>固体科学中的新内容是什么？</td>
+<td>123</td>
+</tr>
+<tr>
+<td></td>
+<td>参考文献</td>
+<td>133</td>
+</tr>
+<tr>
+<td></td>
+<td>索引</td>
+<td>139</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/solids_and_surfaces.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h1 id="讲义"><a href="#讲义" class="headerlink" title="讲义"></a>讲义</h1><p>注意：以下资源可能由于文件大小的限制无法预览，这些文件大部分在<a href="#一百本第一性原理经典工具书">工具书清单</a>中都可找到。</p>
+<h2 id="Quantum-Transport-in-Electron-Devices-and-Novel-Materials"><a href="#Quantum-Transport-in-Electron-Devices-and-Novel-Materials" class="headerlink" title="Quantum Transport in Electron Devices and Novel Materials"></a>Quantum Transport in Electron Devices and Novel Materials</h2><ul>
+<li>语言：英文</li>
+<li>作者：Debdeep Jena</li>
+<li>日期：2015</li>
+<li>来源：<a href="https://courses.cit.cornell.edu/ece5390/2015_ece5390.htm" target="_blank" rel="noopener">Cornell University</a></li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td>Quantum Mechanics in a Nutshell</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Exact Results from Quantum Mechanics</td>
+<td>21</td>
+</tr>
+<tr>
+<td>5</td>
+<td>The Transport Problem: Currents from Quantum Mechanics</td>
+<td>39</td>
+</tr>
+<tr>
+<td>6</td>
+<td>The Concept of Equilibrium: Fermi-Dirac and Bose-Einstein</td>
+<td>47</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Application II: The Ballistic Field-E.ect Transistor</td>
+<td>62</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/quantum_recap_exact_problems_vol_1.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/quantum_currents_equilibrium_ballistic_fets_vol_2.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h2 id="固体-DFT-计算-SCF-参数设置入门"><a href="#固体-DFT-计算-SCF-参数设置入门" class="headerlink" title="固体 DFT 计算 SCF 参数设置入门"></a>固体 DFT 计算 SCF 参数设置入门</h2><ul>
+<li>语言：中文</li>
+<li>作者：董栋</li>
+<li>日期：2019</li>
+<li>来源：<a href="https://www.fermitech.com.cn/wiki/doku.php?id=atk:%E5%9B%BA%E4%BD%93dft%E8%AE%A1%E7%AE%97scf%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E5%85%A5%E9%97%A8" target="_blank" rel="noopener">费米维基</a></li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>选择合适的基组类型/代码</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>选择合适的泛函</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>选择合适的赝势</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>基组/赝势/泛函的推荐设置</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>设置数值精度</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>其他设置</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>设置自洽循环控制</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>参考</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/calculating_args.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h2 id="器件体系的建模与计算"><a href="#器件体系的建模与计算" class="headerlink" title="器件体系的建模与计算"></a>器件体系的建模与计算</h2><ul>
+<li>语言：中文</li>
+<li>作者：董栋</li>
+<li>日期：2018</li>
+<li>来源：<a href="https://www.fermitech.com.cn/wiki/doku.php?id=atk:%E5%99%A8%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%9A%84%E5%BB%BA%E6%A8%A1%E4%B8%8E%E8%AE%A1%E7%AE%97" target="_blank" rel="noopener">费米维基</a></li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>简介</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>用于输运计算的体系几何结构</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>用图形界面 Script Generator 工具设置计算</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>深入分析结果</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>关于器件结构的优化</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/modeling_and_calculating.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h2 id="使用-QuantumATK-研究电子输运"><a href="#使用-QuantumATK-研究电子输运" class="headerlink" title="使用 QuantumATK 研究电子输运"></a>使用 QuantumATK 研究电子输运</h2><ul>
+<li>语言：中文</li>
+<li>作者：董栋</li>
+<li>日期：2019</li>
+<li>来源：<a href="https://www.fermitech.com.cn/wiki/doku.php?id=atk:%E4%BD%BF%E7%94%A8atk%E7%A0%94%E7%A9%B6%E7%94%B5%E5%AD%90%E8%BE%93%E8%BF%90" target="_blank" rel="noopener">费米维基</a></li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>实例简述</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>器件体系的几何结构</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>开始计算</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>设置电极参数的精度</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>零偏压分析</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>有限偏压计算</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>IV 曲线</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>总结</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>参考</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/electronic_transporting.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h2 id="石墨烯纳米带器件：电性质"><a href="#石墨烯纳米带器件：电性质" class="headerlink" title="石墨烯纳米带器件：电性质"></a>石墨烯纳米带器件：电性质</h2><ul>
+<li>语言：中文</li>
+<li>作者：董栋</li>
+<li>日期：2019</li>
+<li>来源：<a href="https://www.fermitech.com.cn/wiki/doku.php?id=atk:%E7%9F%B3%E5%A2%A8%E7%83%AF%E7%BA%B3%E7%B1%B3%E5%B8%A6%E5%99%A8%E4%BB%B6_%E7%94%B5%E6%80%A7%E8%B4%A8" target="_blank" rel="noopener">费米维基</a></li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>电子透射光谱</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>栅极电位的影响</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>I-V 特性</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>什么时候线性响应近似生效？</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>使用 ATK-SE 进一步分析</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>温度依赖的电导</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>与较长器件的结果比较</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>参考</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/graphene_device.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h1 id="手册"><a href="#手册" class="headerlink" title="手册"></a>手册</h1><p>注意：以下资源可能由于文件大小的限制无法预览，这些文件大部分在<a href="#一百本第一性原理经典工具书">工具书清单</a>中都可找到。</p>
+<h2 id="VASP-the-Guide"><a href="#VASP-the-Guide" class="headerlink" title="VASP the Guide"></a>VASP the Guide</h2><ul>
+<li>语言：英文</li>
+<li>作者：Georg Kresse、Martijn Marsman 和 Jurgen Furthmuller</li>
+<li>日期：2018</li>
+<li>来源：<a href="https://www.vasp.at/documentation/" target="_blank" rel="noopener">VASP</a></li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>New features added</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>VASP an introduction</td>
+<td>12</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The installation of VASP</td>
+<td>16</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Parallelization of VASP.4</td>
+<td>31</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Files used by VASP</td>
+<td>35</td>
+</tr>
+<tr>
+<td>6</td>
+<td>The INCAR File</td>
+<td>50</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Theoretical Background</td>
+<td>168</td>
+</tr>
+<tr>
+<td>8</td>
+<td>The most important parameters, source of errors</td>
+<td>180</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Examples</td>
+<td>184</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Pseudopotentials and PAW potentials supplied with the VASP package</td>
+<td>193</td>
+</tr>
+<tr>
+<td>11</td>
+<td>The pseudopotential generation package</td>
+<td>205</td>
+</tr>
+<tr>
+<td>12</td>
+<td>General recommendations for the PSCTR files</td>
+<td>215</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Example PSCTR files</td>
+<td>216</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Important hints for programmers</td>
+<td>219</td>
+</tr>
+<tr>
+<td>15</td>
+<td>FAQ</td>
+<td>221</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/vasp.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h2 id="High-Throughput-Electronic-Band-Structure-Calculations-Challenges-and-Tools"><a href="#High-Throughput-Electronic-Band-Structure-Calculations-Challenges-and-Tools" class="headerlink" title="High-Throughput Electronic Band Structure Calculations: Challenges and Tools"></a>High-Throughput Electronic Band Structure Calculations: Challenges and Tools</h2><ul>
+<li>语言：英文</li>
+<li>作者：Wahyu Setyawan a 和 Stefano Curtarolo</li>
+<li>出版：Elsevier Ltd</li>
+<li>日期：2010</li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Introduction</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Off-line implementation</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Electronic structure database implementation</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Implemented electronic properties</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>LSDA+U corrections</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>On-line implementation: ACONVASP-online</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Acknowledgments</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Appendix A</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Appendix B</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>References</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/high_symmetry_k_path.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+
+<h2 id="Writing-a-Scientific-Paper"><a href="#Writing-a-Scientific-Paper" class="headerlink" title="Writing a Scientific Paper"></a>Writing a Scientific Paper</h2><ul>
+<li>语言：英文</li>
+<li>作者：Peter A. Thrower</li>
+<li>出版：Elsevier Ltd</li>
+<li>日期：2007</li>
+<li>目录：<table>
+<thead>
+<tr>
+<th>章节</th>
+<th>标题</th>
+<th>页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Titles and Abstracts</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Introduction and references</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Experimental</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Results and discussion</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Language</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<details>
+<summary>预览</summary>
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/writing_a_scientific_paper_vol_1.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/writing_a_scientific_paper_vol_2.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/writing_a_scientific_paper_vol_3.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/writing_a_scientific_paper_vol_4.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+	<div class="row">
+    <embed src="https://gitee.com/eigenmiao/docs/raw/master/pdf/writing_a_scientific_paper_vol_5.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+</details>
+<br/>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:eigenmiao@outlook.com">本征喵</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://eigenmiao.site/2020/02/21/resource/">https://eigenmiao.site/2020/02/21/resource/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://eigenmiao.site">本征喵的小站</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AF%86%E5%BA%A6%E6%B3%9B%E5%87%BD%E7%90%86%E8%AE%BA/">密度泛函理论</a><a class="post-meta__tags" href="/tags/%E9%87%8F%E5%AD%90%E8%BE%93%E8%BF%90/">量子输运</a><a class="post-meta__tags" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a><a class="post-meta__tags" href="/tags/%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/">科技论文写作</a></div><div class="social-share pull-right"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/02/22/database/"><i class="fa fa-chevron-left">  </i><span>常用数据库汇总</span></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'true' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+var localeName = 'my-own'
+var localeMode = {head:{nick:"姓名",mail:"邮箱",link:"个人主页"},tips:{comments:"评论",sofa:"快来做第一个评论的人吧 ~",busy:"还在提交中，请稍候 ...",again:" 这么简单也能错，也是没谁了"},ctrl:{reply:"回复",ok:"好的",sure:"确认",cancel:"取消",confirm:"确认",continue:"继续",more:"查看更多 ...",try:"重试",preview:"预览",emoji:"表情"},error:{99:"初始化失败，错误 1001。请联系管理员。",100:"初始化失败，错误 1002。请联系管理员。",401:"未经授权的操作，错误 1003。请联系管理员。",403:"未经授权的操作，错误 1004。请联系管理员。"},timeago:{seconds:"秒前",minutes:"分钟前",hours:"小时前",days:"天前",now:"刚刚"}}
+
+window.valine = new Valine();
+window.valine.installLocale(localeName,localeMode);
+
+window.valine.init({
+  el:'#vcomment',
+  notify:false,
+  verify:true,
+  appId:'sVhWBkYRKiYJotRtiVEP9BWA-MdYXbMMI',
+  appKey:'3Kpj3Sgp6egjsyhsg5t8C4Cz',
+  placeholder:'说点什么吧 (●´∀｀●)',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'my-own'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2020 By 本征喵</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
