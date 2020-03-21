@@ -7,7 +7,7 @@ function muloading(){
         foreimg.style.transform = "scale(" + window.innerHeight / 900 + ")";
 
     } else {
-        foreimg.style.transform = "scale(" + window.innerWidth / 1271 * 1.3 + ")";
+        foreimg.style.transform = "scale(" + window.innerWidth / 1271 * 1.6 + ")";
     };
 
     foreimg.style.opacity = 1.0;
