@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>文献阅读：10</title>
+      <link href="/2020/03/24/article-10/"/>
+      <url>/2020/03/24/article-10/</url>
+      
+        <content type="html"><![CDATA[<p>标题：High-Performance Two-Dimensional InSe Field-Effect Transistors with Novel Sandwiched Ohmic Contact for Sub-$10\ \rm{nm}$ Nodes: a Theoretical Study<br>作者：Jiaduo Zhu, Jing Ning, Dong Wang, Jincheng Zhang, Lixin Guo and Yue Hao<br>期刊：Nanoscale Research Letters<br>日期：2019</p><a id="more"></a><p>简介：这是一篇关于范德华异质结的文献，标题为“用于 $10\ \rm{nm}$ 以下节点的具有新型三明治结构欧姆接触的高性能二维 InSe 场效应晶体管的理论研究”。大致翻译了一下，翻译仅供参考，请以原文为准。如翻译有不妥之处，欢迎一起讨论。</p><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><blockquote><p>Two-dimensional (2D) InSe-based field effect transistor (FET) has shown remarkable carrier mobility and high on-off ratio in experimental reports. Theoretical investigations also predicated the high performance can be well preserved at sub-$10\ \rm{nm}$ nodes in the ballistic limit. However, both experimental experience and theoretical calculations pointed out achieving high-quality ohmic has become the main limiting factor for high-performance 2D FET. In this work, we proposed a new sandwiched ohmic contact with indium for InSe FET and comprehensively evaluated its performance from views of material and device based on ab initio methods. The material properties denote that all of fundamental issues of ohmic contact including tunneling barrier, the Schottky barrier, and effective doping are well concerned by introducing the sandwiched structure, and excellent contact resistance was achieved. At device performance level, devices with gate length of $7$, $5$, and $3\ \rm{nm}$ were investigated. All metrics of sandwiched contacted devices far exceed requirement of the International Technology Roadmap for Semiconductors (ITRS) and exhibit obvious promotion as compared to conventional structures. Maximum boost of current with $69.4 \%$, $50 \%$, and $49 \%$ are achieved for devices with $7$, $5$, and $3\ \rm{nm}$ gate length, respectively. Meanwhile, maximum reduction of the intrinsic delay with $20.4 \%$, $16.7 \%$, and $18.9 \%$ are attained. Moreover, a benchmark of energy-delay product (EDP) against other 2D FETs is presented. All InSe FETs with sandwiched ohmic contact surpass MoS<sub>2</sub> FETs as well as requirement from ITRS 2024. The best result approaches the upper limit of ideal BP FET, denoting superior preponderance of sandwiched structures for InSe FETs in the next generation of complementary metal-oxide semiconductor (CMOS) technology.</p></blockquote><p>基于二维 InSe 的场效应晶体管（FET）在实验报告中显示出显著的载流子迁移率和高的开关比。理论研究还表明，在弹道极限小于 $10\ \rm{nm}$ 的节点处，其性能可以得到很好的保持。然而，无论是实际实验还是理论计算都指出，如何获得高质量的欧姆接触已经成为高性能 2D FET 的主要限制因素。在这项工作中，作者提出了一种新的三明治结构欧姆接触用来制备 InSe FET，并基于从头算方法从材料和器件的角度对其性能进行了综合评价。材料性能表明，通过引入三明治结构，欧姆接触的所有基本问题，包括隧穿势垒、肖特基势垒和有效掺杂都得到了考虑，并获得了优异的接触电阻。在器件性能层面，作者对栅极长度为 $7$, $5$ 和 $3\ \rm{nm}$ 的设备进行了研究。三明治结构接触器件的各项指标均远远超过国际半导体技术路线图（International Technology Roadmap for Semiconductors，ITRS）的要求，并且与传统结构相比有明显的提升。对于栅极长度分别为 $7$, $5$ 和 $3\ \rm{nm}$ 的设备，电流的最大提升分别为 $69.4 \%$, $50 \%$ 和 $49 \%$。同时，在 $20.4 \%$, $16.7 \%$ 和 $18.9 \%$ 的条件下，器件能最大限度地减少固有延迟。此外，作者还提出了能量延迟乘积（energy-delay product，EDP）与其它 2D FET 的比较基准。所有具有三明治结构欧姆接触的InSe FET 均超过 MoS<sub>2</sub> FET 以及 ITRS 2024 的要求。最佳结果接近理想 BP FET 的上限，表明了 InSe FET 三明治结构在下一代互补金属氧化物半导体（complementary metal-oxide semiconductor，CMOS）技术中的优越性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 翻译 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 文献 </tag>
+            
+            <tag> 密度泛函理论 </tag>
+            
+            <tag> 非平衡格林函数理论 </tag>
+            
+            <tag> 场效应晶体管 </tag>
+            
+            <tag> 欧姆接触 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>文献阅读：09</title>
       <link href="/2020/03/21/article-09/"/>
       <url>/2020/03/21/article-09/</url>
@@ -136,13 +169,13 @@
             
             <tag> 二维材料 </tag>
             
+            <tag> 范德华异质结 </tag>
+            
             <tag> 费米能级钉扎 </tag>
             
             <tag> 肖特基接触 </tag>
             
             <tag> 肖特基-莫特极限 </tag>
-            
-            <tag> 范德华异质结 </tag>
             
         </tags>
       
@@ -171,9 +204,9 @@
             
             <tag> 密度泛函理论 </tag>
             
-            <tag> 势垒晶体管 </tag>
-            
             <tag> 肖特基接触 </tag>
+            
+            <tag> 势垒晶体管 </tag>
             
         </tags>
       
@@ -202,11 +235,11 @@
             
             <tag> 非平衡格林函数理论 </tag>
             
-            <tag> 从头计算器件模拟 </tag>
+            <tag> 量子输运 </tag>
             
             <tag> 二维材料 </tag>
             
-            <tag> 量子输运 </tag>
+            <tag> 从头计算器件模拟 </tag>
             
             <tag> 界面 </tag>
             
@@ -239,9 +272,9 @@
             
             <tag> 文献 </tag>
             
-            <tag> 量子输运 </tag>
-            
             <tag> 电子器件 </tag>
+            
+            <tag> 量子输运 </tag>
             
         </tags>
       
@@ -268,19 +301,19 @@
             
             <tag> 文献 </tag>
             
-            <tag> 非平衡格林函数理论 </tag>
-            
-            <tag> 二维材料 </tag>
-            
-            <tag> 量子输运 </tag>
-            
             <tag> 密度泛函理论 </tag>
+            
+            <tag> 非平衡格林函数理论 </tag>
             
             <tag> 电子器件 </tag>
             
-            <tag> 范德华异质结 </tag>
+            <tag> 量子输运 </tag>
             
             <tag> 亚阈值摆幅 </tag>
+            
+            <tag> 二维材料 </tag>
+            
+            <tag> 范德华异质结 </tag>
             
         </tags>
       
@@ -305,9 +338,9 @@
       
         <tags>
             
-            <tag> 兴趣 </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> 兴趣 </tag>
             
         </tags>
       
@@ -332,11 +365,11 @@
       
         <tags>
             
-            <tag> 网站 </tag>
-            
             <tag> 元素周期表 </tag>
             
             <tag> 数据库 </tag>
+            
+            <tag> 网站 </tag>
             
         </tags>
       
@@ -361,9 +394,9 @@
       
         <tags>
             
-            <tag> 量子输运 </tag>
-            
             <tag> 密度泛函理论 </tag>
+            
+            <tag> 量子输运 </tag>
             
             <tag> 固体物理 </tag>
             
