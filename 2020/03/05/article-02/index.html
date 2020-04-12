@@ -179,10 +179,9 @@ var guest_info = 'nick,mail,link'.split(',').filter(function(item){
 guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
 
 var localeName = 'my-own'
-var localeMode = {head:{nick:"姓名",mail:"邮箱",link:"个人主页"},tips:{comments:"评论",sofa:"快来做第一个评论的人吧 ~",busy:"还在提交中，请稍候 ...",again:" 这么简单也能错，也是没谁了"},ctrl:{reply:"回复",ok:"好的",sure:"确认",cancel:"取消",confirm:"确认",continue:"继续",more:"查看更多 ...",try:"重试",preview:"预览",emoji:"表情"},error:{99:"初始化失败，错误 1001。请联系管理员。",100:"初始化失败，错误 1002。请联系管理员。",401:"未经授权的操作，错误 1003。请联系管理员。",403:"未经授权的操作，错误 1004。请联系管理员。"},timeago:{seconds:"秒前",minutes:"分钟前",hours:"小时前",days:"天前",now:"刚刚"}}
+var localeMode = {nick:"姓名",mail:"邮箱",link:"个人主页",sofa:"来发评论吧~",submit:"提交",reply:"回复",cancelReply:"取消回复",comments:"评论",cancel:"取消",confirm:"确认",continue:"继续",more:"加载更多...",preview:"预览",emoji:"表情",expand:"查看更多...",seconds:"秒前",minutes:"分钟前",hours:"小时前",days:"天前",now:"刚刚",uploading:"正在传输...",uploadDone:"传输完成!",busy:"操作频繁，请稍候再试...","code-99":"初始化失败，请检查init中的`el`元素.","code-100":"初始化失败，请检查你的AppId和AppKey.","code-140":"今日 API 调用总次数已超过开发版限制.","code-401":"未经授权的操作，请检查你的AppId和AppKey.","code-403":"访问被API域名白名单拒绝，请检查你的安全域名设置."}
 
 window.valine = new Valine();
-window.valine.installLocale(localeName,localeMode);
 
 window.valine.init({
   el:'#vcomment',
@@ -194,7 +193,8 @@ window.valine.init({
   avatar:'mm',
   guest_info:guest_info,
   pageSize:'10',
-  lang: 'my-own'
+  lang: localeName,
+  langMode: localeMode
 })</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2020 By 本征喵</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
