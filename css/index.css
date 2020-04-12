@@ -553,14 +553,15 @@ footer.is-mobile {
 #site-sub-title {
   color: #fff159;
   text-align: center;
-  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
   line-height: 1.5;
 }
 #site-title {
+  text-shadow: 3px 3px 0px #000;
   font-weight: bold;
   font-size: 1.3rem;
 }
 #site-sub-title {
+  text-shadow: 1px 1px 0px #000;
   font-size: 0.8rem;
 }
 #site-social-icons {
@@ -595,7 +596,7 @@ footer.is-mobile {
 #page-header .toggle-menu {
   display: none;
   padding-top: 0.5rem;
-  color: #fff159;
+  color: #000;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -607,7 +608,7 @@ footer.is-mobile {
   color: #fff;
 }
 #page-header a {
-  color: #fff159;
+  color: #000;
   text-decoration: none;
 }
 #page-header a:hover {
@@ -1091,7 +1092,7 @@ footer.is-mobile {
   overflow: hidden;
 }
 #post-meta {
-  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
+  text-shadow: 1px 1px 0px #000;
 }
 #post #post-meta {
   color: #858585;
@@ -1127,7 +1128,6 @@ footer.is-mobile {
   height: 56px;
 }
 #top-container a {
-  color: #fff159;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -1178,11 +1178,14 @@ footer.is-mobile {
   text-align: center;
 }
 #top-container #post-title {
-  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
+  text-shadow: 3px 3px 0px #000;
   font-size: 1.3rem;
 }
 #top-container i.fa.fa-angle-right {
   margin: 0 0.3rem 0 0.2rem;
+}
+.post-meta__categories {
+  color: #fff159;
 }
 .post-meta__separator {
   margin: 0 0.3rem;
@@ -1434,7 +1437,7 @@ a:hover {
   text-decoration: none;
 }
 a#site-name {
-  color: #fff159;
+  color: #000;
   text-decoration: none;
 }
 a.fancybox {
@@ -1578,11 +1581,11 @@ img:hover {
     background-attachment: fixed;
   }
   #top-container #post-title {
-    color: #fff159;
+    color: #000;
     font-size: 1.1rem;
   }
   #post-title {
-    color: #fff159;
+    color: #000;
     font-size: 1.1rem;
   }
 }
