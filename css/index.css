@@ -466,6 +466,10 @@ blockquote {
 #disqus_thread {
   margin-top: 1rem;
 }
+#vcomment img {
+  border: 0;
+  padding: 0;
+}
 footer {
   margin-top: 1rem;
   background: #49b1f5;
