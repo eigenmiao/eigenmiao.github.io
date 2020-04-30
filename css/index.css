@@ -617,13 +617,13 @@ footer.is-mobile {
   text-decoration: none;
 }
 #page-header a:hover {
-  color: #fff;
+  color: #fff159;
 }
 #page-header .site-page {
   position: relative;
   margin-left: 0.6rem;
   padding-bottom: 0.3rem;
-  text-shadow: 1px 1px 0px #fff159;
+  text-shadow: 1px 1px 0px #fff;
   font-size: 0.7rem;
   cursor: pointer;
 }
@@ -683,7 +683,7 @@ footer.is-mobile {
   transform: translate3d(0, 100%, 0);
 }
 #page-header #site-name {
-  text-shadow: 2px 2px 0px #fff159;
+  text-shadow: 2px 2px 0px #fff;
   font-weight: bold;
   cursor: pointer;
 }
@@ -1141,7 +1141,7 @@ footer.is-mobile {
   transition: all 0.3s ease-out;
 }
 #top-container a:hover {
-  color: #fff;
+  color: #fff159;
 }
 #top-container #top-img {
   padding: 0;
