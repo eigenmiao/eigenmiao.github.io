@@ -561,12 +561,12 @@ footer.is-mobile {
   line-height: 1.5;
 }
 #site-title {
-  text-shadow: 3px 3px 0px #000;
+  text-shadow: 0.1em 0.1em 0em #000;
   font-weight: bold;
   font-size: 1.3rem;
 }
 #site-sub-title {
-  text-shadow: 1px 1px 0px #000;
+  text-shadow: 0.04em 0.04em 0em #000;
   font-size: 0.8rem;
 }
 #site-social-icons {
@@ -577,7 +577,7 @@ footer.is-mobile {
 #site-social-icons .social-icon {
   margin: 0 0.5rem;
   color: #fff159;
-  text-shadow: 1px 1px 0px #000;
+  text-shadow: 0.04em 0.04em 0em #000;
   font-size: 1.4rem;
   cursor: pointer;
 }
@@ -623,7 +623,7 @@ footer.is-mobile {
   position: relative;
   margin-left: 0.6rem;
   padding-bottom: 0.3rem;
-  text-shadow: 1px 1px 0px #fff;
+  text-shadow: 0.04em 0.04em 0em #fff;
   font-size: 0.7rem;
   cursor: pointer;
 }
@@ -683,7 +683,7 @@ footer.is-mobile {
   transform: translate3d(0, 100%, 0);
 }
 #page-header #site-name {
-  text-shadow: 2px 2px 0px #fff;
+  text-shadow: 0.08em 0.08em 0em #fff;
   font-weight: bold;
   cursor: pointer;
 }
@@ -1097,7 +1097,7 @@ footer.is-mobile {
   overflow: hidden;
 }
 #post-meta {
-  text-shadow: 1px 1px 0px #000;
+  text-shadow: 0.04em 0.04em 0em #000;
 }
 #post #post-meta {
   color: #858585;
@@ -1183,7 +1183,7 @@ footer.is-mobile {
   text-align: center;
 }
 #top-container #post-title {
-  text-shadow: 3px 3px 0px #000;
+  text-shadow: 0.1em 0.1em 0em #000;
   font-size: 1.3rem;
 }
 #top-container i.fa.fa-angle-right {
