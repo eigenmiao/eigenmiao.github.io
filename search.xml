@@ -8,9 +8,25 @@
       <link href="/2020/05/11/article-11/"/>
       <url>/2020/05/11/article-11/</url>
       
-        <content type="html"><![CDATA[<p>标题：Coplanar semiconductor–metal circuitry defined on few-layer MoTe<sub>2</sub> via polymorphic heteroepitaxy<br>作者：Ji Ho Sung, Hoseok Heo, Saerom Si, Yong Hyeon Kim, Hyeong Rae Noh, Kyung Song, Juho Kim, Chang-Soo Lee, Seung-Young Seo, Dong-Hwi Kim, Hyoung Kug Kim, Han Woong Yeom, Tae-Hwan Kim, Si-Young Choi, Jun Sung Kim and Moon-Ho Jo<br>期刊：Nature Nanotechnology<br>日期：2017</p><a id="more"></a><p>简介：这是一篇关于范德华异质结的文献，标题为“通过多晶异质外延限定在少数层 MoTe<sub>2</sub> 上的共面半导体-金属电路”。大致翻译了一下，翻译仅供参考，请以原文为准。如翻译有不妥之处，欢迎一起讨论。</p><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><blockquote><p>Crystal polymorphism selectively stabilizes the electronic phase of atomically thin transition-metal dichalcogenides (TMDCs) as metallic or semiconducting, suggesting the potential to integrate these polymorphs as circuit components in two-dimensional electronic circuitry. Developing a selective and sequential growth strategy for such two-dimensional polymorphs in the vapour phase is a critical step in this endeavour. Here, we report on the polymorphic integration of distinct metallic (1T′) and semiconducting (2H) MoTe<sub>2</sub> crystals within the same atomic planes by heteroepitaxy. The realized polymorphic coplanar contact is atomically coherent, and its barrier potential is spatially tight-confined over a length of only a few nanometres, with a lowest contact barrier height of $\sim 25\ \rm{meV}$. We also demonstrate the generality of our synthetic integration approach for other TMDC polymorph films with large areas.</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>标题：Coplanar semiconductor–metal circuitry defined on few-layer MoTe<sub>2</sub> via polymorphic heteroepitaxy<br>作者：Ji Ho Sung, Hoseok Heo, Saerom Si, Yong Hyeon Kim, Hyeong Rae Noh, Kyung Song, Juho Kim, Chang-Soo Lee, Seung-Young Seo, Dong-Hwi Kim, Hyoung Kug Kim, Han Woong Yeom, Tae-Hwan Kim, Si-Young Choi, Jun Sung Kim and Moon-Ho Jo<br>期刊：Nature Nanotechnology<br>日期：2017</p><a id="more"></a><p>简介：这是一篇关于范德华异质结的文献，标题为“通过多晶异质外延生长方法限定在少数层 MoTe<sub>2</sub> 上的共面半导体-金属电路”。</p><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><blockquote><p>Crystal polymorphism selectively stabilizes the electronic phase of atomically thin transition-metal dichalcogenides (TMDCs) as metallic or semiconducting, suggesting the potential to integrate these polymorphs as circuit components in two-dimensional electronic circuitry. Developing a selective and sequential growth strategy for such two-dimensional polymorphs in the vapour phase is a critical step in this endeavour. Here, we report on the polymorphic integration of distinct metallic (1T′) and semiconducting (2H) MoTe<sub>2</sub> crystals within the same atomic planes by heteroepitaxy. The realized polymorphic coplanar contact is atomically coherent, and its barrier potential is spatially tight-confined over a length of only a few nanometres, with a lowest contact barrier height of $\sim 25\ \rm{meV}$. We also demonstrate the generality of our synthetic integration approach for other TMDC polymorph films with large areas.</p></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> 翻译 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 文献 </tag>
+            
+            <tag> 多晶 </tag>
+            
+            <tag> 外延生长 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -35,9 +51,9 @@
             
             <tag> 文献 </tag>
             
-            <tag> 非平衡格林函数理论 </tag>
-            
             <tag> 密度泛函理论 </tag>
+            
+            <tag> 非平衡格林函数理论 </tag>
             
             <tag> 场效应晶体管 </tag>
             
@@ -182,11 +198,11 @@
             
             <tag> 二维材料 </tag>
             
+            <tag> 范德华异质结 </tag>
+            
             <tag> 费米能级钉扎 </tag>
             
             <tag> 肖特基接触 </tag>
-            
-            <tag> 范德华异质结 </tag>
             
             <tag> 肖特基-莫特极限 </tag>
             
@@ -246,13 +262,13 @@
             
             <tag> 文献 </tag>
             
-            <tag> 量子输运 </tag>
-            
             <tag> 非平衡格林函数理论 </tag>
             
-            <tag> 从头计算器件模拟 </tag>
+            <tag> 量子输运 </tag>
             
             <tag> 二维材料 </tag>
+            
+            <tag> 从头计算器件模拟 </tag>
             
             <tag> 界面 </tag>
             
@@ -314,17 +330,17 @@
             
             <tag> 文献 </tag>
             
+            <tag> 密度泛函理论 </tag>
+            
+            <tag> 非平衡格林函数理论 </tag>
+            
             <tag> 电子器件 </tag>
             
             <tag> 量子输运 </tag>
             
-            <tag> 非平衡格林函数理论 </tag>
+            <tag> 亚阈值摆幅 </tag>
             
             <tag> 二维材料 </tag>
-            
-            <tag> 密度泛函理论 </tag>
-            
-            <tag> 亚阈值摆幅 </tag>
             
             <tag> 范德华异质结 </tag>
             
@@ -407,9 +423,9 @@
       
         <tags>
             
-            <tag> 量子输运 </tag>
-            
             <tag> 密度泛函理论 </tag>
+            
+            <tag> 量子输运 </tag>
             
             <tag> 固体物理 </tag>
             
