@@ -35,6 +35,9 @@ body {
 *::-webkit-scrollbar-track {
   background-color: transparent;
 }
+a {
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -566,7 +569,7 @@ footer.is-mobile {
   font-size: 1.3rem;
 }
 #site-sub-title {
-  text-shadow: 0.04em 0.04em 0em #000;
+  text-shadow: 0.06em 0.06em 0em #000;
   font-size: 0.8rem;
 }
 #site-social-icons {
@@ -577,7 +580,7 @@ footer.is-mobile {
 #site-social-icons .social-icon {
   margin: 0 0.5rem;
   color: #fff159;
-  text-shadow: 0.04em 0.04em 0em #000;
+  text-shadow: 0.06em 0.06em 0em #000;
   font-size: 1.4rem;
   cursor: pointer;
 }
@@ -623,7 +626,7 @@ footer.is-mobile {
   position: relative;
   margin-left: 0.6rem;
   padding-bottom: 0.3rem;
-  text-shadow: 0.04em 0.04em 0em #fff;
+  text-shadow: 0.03em 0.03em 0em #fff;
   font-size: 0.7rem;
   cursor: pointer;
 }
@@ -1097,7 +1100,7 @@ footer.is-mobile {
   overflow: hidden;
 }
 #post-meta {
-  text-shadow: 0.04em 0.04em 0em #000;
+  text-shadow: 0.06em 0.06em 0em #000;
 }
 #post #post-meta {
   color: #858585;
