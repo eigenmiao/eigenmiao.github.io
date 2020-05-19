@@ -626,7 +626,7 @@ footer.is-mobile {
   position: relative;
   margin-left: 0.6rem;
   padding-bottom: 0.3rem;
-  text-shadow: 0.03em 0.03em 0em #fff;
+  text-shadow: 1px 1px 0px #fff, -1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff;
   font-size: 0.7rem;
   cursor: pointer;
 }
@@ -686,7 +686,7 @@ footer.is-mobile {
   transform: translate3d(0, 100%, 0);
 }
 #page-header #site-name {
-  text-shadow: 0.08em 0.08em 0em #fff;
+  text-shadow: 1px 1px 0px #fff, -1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff;
   font-weight: bold;
   cursor: pointer;
 }
@@ -1100,7 +1100,7 @@ footer.is-mobile {
   overflow: hidden;
 }
 #post-meta {
-  text-shadow: 0.06em 0.06em 0em #000;
+  text-shadow: 1px 1px 0px #000, -1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000;
 }
 #post #post-meta {
   color: #858585;
