@@ -581,11 +581,28 @@ footer.is-mobile {
   margin: 0 0.5rem;
   color: #fff159;
   text-shadow: 0.06em 0.06em 0em #000;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 #site-social-icons .social-icon:hover {
   color: #fff;
+  text-shadow: 0.12em 0.12em 0em #000;
+}
+#site-social-icons .my-digipale {
+  fill: #fff159;
+  stroke: #fff159;
+  stroke-width: 1.6;
+  filter: drop-shadow(0.06em 0.06em 0em #000);
+  stroke-linecap: butt;
+  stroke-linejoin: bevel;
+  stroke-opacity: 1;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+}
+#site-social-icons .my-digipale:hover {
+  fill: #fff;
+  stroke: #fff;
+  filter: drop-shadow(0.12em 0.12em 0em #000);
 }
 #page-header {
   position: absolute;
