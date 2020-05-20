@@ -598,6 +598,11 @@ footer.is-mobile {
   stroke-opacity: 1;
   stroke-miterlimit: 4;
   stroke-dasharray: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 #site-social-icons .my-digipale:hover {
   fill: #fff;
