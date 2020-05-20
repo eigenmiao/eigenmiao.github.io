@@ -591,12 +591,12 @@ footer.is-mobile {
 #site-social-icons .my-digipale {
   fill: #fff159;
   stroke: #fff159;
-  stroke-width: 1.6;
+  stroke-width: 6;
   filter: drop-shadow(0.06em 0.06em 0em #000);
   stroke-linecap: butt;
   stroke-linejoin: bevel;
-  stroke-opacity: 1;
   stroke-miterlimit: 4;
+  stroke-opacity: 1;
   stroke-dasharray: none;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
