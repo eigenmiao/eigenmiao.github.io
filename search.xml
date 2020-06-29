@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>修改 CALYPSO 提取能量值的方式</title>
+      <link href="/2020/06/23/calypso-01/"/>
+      <url>/2020/06/23/calypso-01/</url>
+      
+        <content type="html"><![CDATA[<p><a href="http://calypso.cn/" target="_blank" rel="noopener">CALYPSO</a> 是基于粒子群优化算法的晶体结构预测程序，只根据材料的化学配比和给定的外界条件就可以寻找体系的基态及亚稳态结构。CALYPSO 在进行结构演化时需要调用其它结构弛豫软件，如 <a href="https://vasp.at/" target="_blank" rel="noopener">VASP</a> 等。然而，在使用 VASP 对产生的结构进行弛豫时，必须指定 PSTRESS 参数（即使预测的不是高压相结构），这个参数对收敛性有一定的影响。另外，结构优化完毕后，CALYPSO 提取的是焓值，而不是能量值。CALYPSO 6.0 没有提供修改提取方式的参数，因此，如果想要在结构优化时不使用 PSTRESS 参数并提取能量值（而不是焓值）的话，需要自己手动修改源文件。</p><a id="more"></a><p>本文提供了一种方法，通过修改 calypso.x 自动生成的 getenth.py 文件来屏蔽应力校验，并直接提取结构优化后的能量值。此方法仅供学习使用。</p><h1 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h1><ol><li>CALYPSO 的主程序 calypso.x 在开始运行时会自动生成一些 Python 脚本文件，其中 getenth.py 文件的主要功能是从 OUTCAR 中提取焓值。用文本编辑器（如 vi、Visual Studio Code 等）打开 getenth.py 文件。</li><li>第 106 行的 enthalpy 函数是提取焓值的入口，运行时首先调用 pressure 函数校验外加应力，随后调用 outEnergy 函数提取焓值。原始的 enthalpy 函数如下所示。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">enthalpy</span><span class="params">(caldir)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">       <span class="keyword">if</span> pressure(caldir):</span><br><span class="line">          e = outEnergy(caldir)</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">          e = <span class="number">610612509</span></span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">       e = <span class="number">610612509</span></span><br><span class="line">    <span class="comment"># h = hardness()</span></span><br><span class="line">    <span class="keyword">return</span> e</span><br></pre></td></tr></table></figure></li><li>改写第 106 行的 enthalpy 函数，删除应力校验。修改后的 enthalpy 函数如下所示。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">enthalpy</span><span class="params">(caldir)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">       e = outEnergy(caldir)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">       e = <span class="number">610612509</span></span><br><span class="line">    <span class="comment"># h = hardness()</span></span><br><span class="line">    <span class="keyword">return</span> e</span><br></pre></td></tr></table></figure></li><li>此时 getenth.py 会跳过应力校验，直接提取焓值。若想从 OUTCAR 中提取能量值而不是焓值，则需要进一步修改 outEnergy 函数。第 74 行的 outEnergy 函数提供了提取焓值的具体方法，脚本会从“enthalpy is  TOTEN    =”一行读取焓值。原始的 outEnergy 函数如下所示。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outEnergy</span><span class="params">(caldir)</span>:</span></span><br><span class="line">    f = open(caldir + <span class="string">'/CONTCAR'</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6</span>):</span><br><span class="line">        line = f.readline()</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        natom = sum(map(int, line.split()))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        line = f.readline()</span><br><span class="line">        natom = sum(map(int, line.split()))</span><br><span class="line">    f.close()</span><br><span class="line">    osawk = <span class="string">'''awk '/enthalpy is  TOTEN    =/ &#123;print $5&#125;' '''</span> + caldir + <span class="string">'''/OUTCAR | tail -1'''</span></span><br><span class="line">    b = os.popen(osawk).read() </span><br><span class="line">    a = b[<span class="number">0</span>:<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        e = float(a) / natom</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        e = <span class="number">610612509</span></span><br><span class="line">    <span class="keyword">return</span> e</span><br></pre></td></tr></table></figure></li><li>改写第 74 行的 outEnergy 函数，从而让脚本从“energy  without entropy=”一行读取能量值。修改后的 outEnergy 函数如下所示。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outEnergy</span><span class="params">(caldir)</span>:</span></span><br><span class="line">    f = open(caldir + <span class="string">"/CONTCAR"</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">6</span>):</span><br><span class="line">        line = f.readline()</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        natom = sum(map(int, line.split()))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        line = f.readline()</span><br><span class="line">        natom = sum(map(int, line.split()))</span><br><span class="line">    f.close()</span><br><span class="line">    osawk = <span class="string">'''awk '/energy  without entropy=/ &#123;print $4&#125;' '''</span> + caldir + <span class="string">"/OUTCAR | tail -1"</span></span><br><span class="line">    b = os.popen(osawk).read() </span><br><span class="line">    a = b[<span class="number">0</span>:<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        e = float(a)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        e = <span class="number">610612509</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> e</span><br></pre></td></tr></table></figure></li><li>修改完毕。结构弛豫完成后，CALYPSO 会调用修改后的 getenth.py 脚本直接提取能量值。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CALYPSO </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>文献阅读：11</title>
       <link href="/2020/05/11/article-11/"/>
       <url>/2020/05/11/article-11/</url>
@@ -51,9 +78,9 @@
             
             <tag> 文献 </tag>
             
-            <tag> 密度泛函理论 </tag>
-            
             <tag> 非平衡格林函数理论 </tag>
+            
+            <tag> 密度泛函理论 </tag>
             
             <tag> 场效应晶体管 </tag>
             
@@ -196,15 +223,15 @@
             
             <tag> 文献 </tag>
             
-            <tag> 肖特基接触 </tag>
-            
             <tag> 二维材料 </tag>
-            
-            <tag> 范德华异质结 </tag>
             
             <tag> 费米能级钉扎 </tag>
             
+            <tag> 肖特基接触 </tag>
+            
             <tag> 肖特基-莫特极限 </tag>
+            
+            <tag> 范德华异质结 </tag>
             
         </tags>
       
@@ -231,11 +258,11 @@
             
             <tag> 文献 </tag>
             
+            <tag> 肖特基接触 </tag>
+            
             <tag> 密度泛函理论 </tag>
             
             <tag> 势垒晶体管 </tag>
-            
-            <tag> 肖特基接触 </tag>
             
         </tags>
       
@@ -264,17 +291,17 @@
             
             <tag> 非平衡格林函数理论 </tag>
             
-            <tag> 量子输运 </tag>
+            <tag> 从头计算器件模拟 </tag>
             
             <tag> 二维材料 </tag>
             
-            <tag> 费米能级钉扎 </tag>
-            
-            <tag> 从头计算器件模拟 </tag>
+            <tag> 量子输运 </tag>
             
             <tag> 界面 </tag>
             
             <tag> 传输长度 </tag>
+            
+            <tag> 费米能级钉扎 </tag>
             
         </tags>
       
@@ -301,9 +328,9 @@
             
             <tag> 文献 </tag>
             
-            <tag> 电子器件 </tag>
-            
             <tag> 量子输运 </tag>
+            
+            <tag> 电子器件 </tag>
             
         </tags>
       
@@ -330,19 +357,19 @@
             
             <tag> 文献 </tag>
             
-            <tag> 密度泛函理论 </tag>
-            
             <tag> 非平衡格林函数理论 </tag>
-            
-            <tag> 电子器件 </tag>
-            
-            <tag> 量子输运 </tag>
-            
-            <tag> 亚阈值摆幅 </tag>
             
             <tag> 二维材料 </tag>
             
+            <tag> 量子输运 </tag>
+            
+            <tag> 电子器件 </tag>
+            
             <tag> 范德华异质结 </tag>
+            
+            <tag> 密度泛函理论 </tag>
+            
+            <tag> 亚阈值摆幅 </tag>
             
         </tags>
       
@@ -367,9 +394,9 @@
       
         <tags>
             
-            <tag> 网站 </tag>
-            
             <tag> 兴趣 </tag>
+            
+            <tag> 网站 </tag>
             
         </tags>
       
@@ -394,11 +421,11 @@
       
         <tags>
             
+            <tag> 网站 </tag>
+            
             <tag> 元素周期表 </tag>
             
             <tag> 数据库 </tag>
-            
-            <tag> 网站 </tag>
             
         </tags>
       
@@ -423,9 +450,9 @@
       
         <tags>
             
-            <tag> 密度泛函理论 </tag>
-            
             <tag> 量子输运 </tag>
+            
+            <tag> 密度泛函理论 </tag>
             
             <tag> 固体物理 </tag>
             
