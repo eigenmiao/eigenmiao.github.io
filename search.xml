@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>修改 CALYPSO 固定晶胞体积的方式</title>
+      <link href="/2020/06/28/calypso-02/"/>
+      <url>/2020/06/28/calypso-02/</url>
+      
+        <content type="html"><![CDATA[<p><a href="http://calypso.cn/" target="_blank" rel="noopener">CALYPSO</a> 是基于粒子群优化算法的晶体结构预测程序，只根据材料的化学配比和给定的外界条件就可以寻找体系的基态及亚稳态结构。CALYPSO 在进行结构演化时需要调用其它结构弛豫软件，如 <a href="https://vasp.at/" target="_blank" rel="noopener">VASP</a> 等。CALYPSO 6.0 可以通过 Volume 参数固定第一代能生成晶胞的体积，第二代及以后生成晶胞的体积是根据前代晶胞的体积演化而来，一般不需要固定。如果想要固定每一代生成晶胞的体积，则需要自己手动修改源文件。</p><a id="more"></a><p>本文提供了一种方法，通过修改 calypso.x 自动生成的 poscar.py 文件来固定生成晶胞的体积。此方法仅供学习使用。</p><h1 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h1><ol><li>CALYPSO 的主程序 calypso.x 在开始运行时会自动生成一些 Python 脚本文件，其中 poscar.py 文件的主要功能是按格式规范化生成的 POSCAR 文件。用文本编辑器（如 vi、Visual Studio Code 等）打开 poscar.py 文件。</li><li>第 27 行的 for 循环写入了原始 POSCAR 的前两行。原始的 for 循环如下所示。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> pos[<span class="number">0</span>:<span class="number">2</span>]:</span><br><span class="line">    poscar.write(item)</span><br></pre></td></tr></table></figure></li><li>改写第 27 行的 for 循环。修改后的 for 循环如下所示。其中“static_vol = 150.0”是固定的体积大小，根据需要可以设置为其他值。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">poscar.write(pos[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    static_vol = <span class="number">150.0</span></span><br><span class="line">    mya = lattice[<span class="number">0</span>]</span><br><span class="line">    myb = lattice[<span class="number">1</span>]</span><br><span class="line">    myc = lattice[<span class="number">2</span>]</span><br><span class="line">    mybc = [myb[<span class="number">1</span>] * myc[<span class="number">2</span>] - myb[<span class="number">2</span>] * myc[<span class="number">1</span>], myb[<span class="number">2</span>] * myc[<span class="number">0</span>] - myb[<span class="number">0</span>] * myc[<span class="number">2</span>], myb[<span class="number">0</span>] * myc[<span class="number">1</span>] - myb[<span class="number">1</span>] * myc[<span class="number">0</span>]]</span><br><span class="line">    myvol = mya[<span class="number">0</span>] * mybc[<span class="number">0</span>] + mya[<span class="number">1</span>] * mybc[<span class="number">1</span>] + mya[<span class="number">2</span>] * mybc[<span class="number">2</span>]</span><br><span class="line">    poscar.write(str((static_vol * <span class="number">1.0</span> / myvol) ** <span class="number">0.333333</span>))</span><br><span class="line">    poscar.write(<span class="string">"\n"</span>)</span><br><span class="line">    <span class="comment"># print("POSCAR CHANGE TOF")</span></span><br><span class="line">    <span class="comment"># print(str((static_vol * 1.0 / myvol) ** 0.333333))</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> err:</span><br><span class="line">    <span class="comment"># print("POSCAR CHANGE ERR")</span></span><br><span class="line">    <span class="comment"># print(str(err))</span></span><br><span class="line">    poscar.write(pos[<span class="number">1</span>])</span><br></pre></td></tr></table></figure></li><li>修改完毕。结构弛豫完成后，CALYPSO 会调用修改后的 poscar.py 脚本将原始 POSCAR 文件规范化为具有固定晶胞体积的 POSCAR 文件。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CALYPSO </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>修改 CALYPSO 提取能量值的方式</title>
       <link href="/2020/06/23/calypso-01/"/>
       <url>/2020/06/23/calypso-01/</url>
@@ -78,9 +105,9 @@
             
             <tag> 文献 </tag>
             
-            <tag> 非平衡格林函数理论 </tag>
-            
             <tag> 密度泛函理论 </tag>
+            
+            <tag> 非平衡格林函数理论 </tag>
             
             <tag> 场效应晶体管 </tag>
             
@@ -223,15 +250,15 @@
             
             <tag> 文献 </tag>
             
+            <tag> 肖特基接触 </tag>
+            
             <tag> 二维材料 </tag>
+            
+            <tag> 范德华异质结 </tag>
             
             <tag> 费米能级钉扎 </tag>
             
-            <tag> 肖特基接触 </tag>
-            
             <tag> 肖特基-莫特极限 </tag>
-            
-            <tag> 范德华异质结 </tag>
             
         </tags>
       
@@ -258,11 +285,11 @@
             
             <tag> 文献 </tag>
             
-            <tag> 肖特基接触 </tag>
-            
             <tag> 密度泛函理论 </tag>
             
             <tag> 势垒晶体管 </tag>
+            
+            <tag> 肖特基接触 </tag>
             
         </tags>
       
@@ -289,19 +316,19 @@
             
             <tag> 文献 </tag>
             
-            <tag> 非平衡格林函数理论 </tag>
+            <tag> 量子输运 </tag>
             
-            <tag> 从头计算器件模拟 </tag>
+            <tag> 非平衡格林函数理论 </tag>
             
             <tag> 二维材料 </tag>
             
-            <tag> 量子输运 </tag>
+            <tag> 费米能级钉扎 </tag>
+            
+            <tag> 从头计算器件模拟 </tag>
             
             <tag> 界面 </tag>
             
             <tag> 传输长度 </tag>
-            
-            <tag> 费米能级钉扎 </tag>
             
         </tags>
       
@@ -328,9 +355,9 @@
             
             <tag> 文献 </tag>
             
-            <tag> 量子输运 </tag>
-            
             <tag> 电子器件 </tag>
+            
+            <tag> 量子输运 </tag>
             
         </tags>
       
@@ -357,19 +384,19 @@
             
             <tag> 文献 </tag>
             
-            <tag> 非平衡格林函数理论 </tag>
-            
-            <tag> 二维材料 </tag>
+            <tag> 电子器件 </tag>
             
             <tag> 量子输运 </tag>
             
-            <tag> 电子器件 </tag>
-            
-            <tag> 范德华异质结 </tag>
-            
             <tag> 密度泛函理论 </tag>
             
+            <tag> 非平衡格林函数理论 </tag>
+            
             <tag> 亚阈值摆幅 </tag>
+            
+            <tag> 二维材料 </tag>
+            
+            <tag> 范德华异质结 </tag>
             
         </tags>
       
