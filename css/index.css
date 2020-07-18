@@ -581,7 +581,7 @@ footer.is-mobile {
   margin: 0 0.5rem;
   color: #fff159;
   text-shadow: 0.06em 0.06em 0em #000;
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 #site-social-icons .social-icon:hover {
@@ -603,6 +603,8 @@ footer.is-mobile {
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 #site-social-icons .my-digipale:hover {
   fill: #fff;
@@ -719,6 +721,13 @@ footer.is-mobile {
   }
   #site-sub-title {
     font-size: 1.2rem;
+  }
+  #site-social-icons .social-icon {
+    font-size: 1.6rem;
+  }
+  #site-social-icons .my-digipale {
+    width: 1.6rem;
+    height: 1.6rem;
   }
 }
 @media screen and (max-width: 768px) {
