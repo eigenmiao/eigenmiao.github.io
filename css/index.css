@@ -564,12 +564,12 @@ footer.is-mobile {
   line-height: 1.5;
 }
 #site-title {
-  text-shadow: 0.1em 0.1em 0em #000;
+  filter: drop-shadow(0.12em 0.12em 0em #000);
   font-weight: bold;
   font-size: 1.3rem;
 }
 #site-sub-title {
-  text-shadow: 0.06em 0.06em 0em #000;
+  filter: drop-shadow(0.06em 0.06em 0em #000);
   font-size: 0.8rem;
 }
 #site-social-icons {
@@ -580,19 +580,18 @@ footer.is-mobile {
 #site-social-icons .social-icon {
   margin: 0 0.5rem;
   color: #fff159;
-  text-shadow: 0.06em 0.06em 0em #000;
+  filter: drop-shadow(0.06em 0.06em 0em #000);
   font-size: 1.1rem;
   cursor: pointer;
 }
 #site-social-icons .social-icon:hover {
   color: #fff;
-  text-shadow: 0.12em 0.12em 0em #000;
+  filter: drop-shadow(0.12em 0.12em 0em #000);
 }
 #site-social-icons .my-digipale {
   fill: #fff159;
   stroke: #fff159;
   stroke-width: 4.5;
-  filter: drop-shadow(0.06em 0.06em 0em #000);
   stroke-linecap: butt;
   stroke-linejoin: bevel;
   stroke-miterlimit: 4;
@@ -609,7 +608,6 @@ footer.is-mobile {
 #site-social-icons .my-digipale:hover {
   fill: #fff;
   stroke: #fff;
-  filter: drop-shadow(0.12em 0.12em 0em #000);
 }
 #page-header {
   position: absolute;
@@ -635,7 +633,6 @@ footer.is-mobile {
   -o-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  text-shadow: 1px 1px 0px #fff, -1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff;
 }
 #page-header .toggle-menu:hover {
   color: #fff159;
@@ -651,7 +648,6 @@ footer.is-mobile {
   position: relative;
   margin-left: 0.6rem;
   padding-bottom: 0.3rem;
-  text-shadow: 1px 1px 0px #fff, -1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff;
   font-size: 0.7rem;
   cursor: pointer;
 }
@@ -696,7 +692,6 @@ footer.is-mobile {
 #page-header.fixed .toggle-menu,
 #page-header.fixed #site-name {
   color: #3b3a3a;
-  text-shadow: none;
 }
 #page-header.fixed a:hover,
 #page-header.fixed .toggle-menu:hover,
@@ -711,7 +706,6 @@ footer.is-mobile {
   transform: translate3d(0, 100%, 0);
 }
 #page-header #site-name {
-  text-shadow: 1px 1px 0px #fff, -1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff;
   font-weight: bold;
   cursor: pointer;
 }
@@ -1132,7 +1126,7 @@ footer.is-mobile {
   overflow: hidden;
 }
 #post-meta {
-  text-shadow: 1px 1px 0px #000, -1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000;
+  filter: drop-shadow(0.06em 0.06em 0em #000);
 }
 #post #post-meta {
   color: #858585;
@@ -1218,7 +1212,7 @@ footer.is-mobile {
   text-align: center;
 }
 #top-container #post-title {
-  text-shadow: 0.1em 0.1em 0em #000;
+  filter: drop-shadow(0.12em 0.12em 0em #000);
   font-size: 1.3rem;
 }
 #top-container i.fa.fa-angle-right {
