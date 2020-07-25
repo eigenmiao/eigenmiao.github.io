@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>火狐的小熊猫</title>
+      <link href="/2020/07/25/firefox-red-pandas/"/>
+      <url>/2020/07/25/firefox-red-pandas/</url>
+      
+        <content type="html"><![CDATA[<div style='text-align: left; font-size: normal'>火狐的小熊猫。<img src='https://gitee.com/eigenmiao/emos/raw/master/tieba/tieba-7.png' class='no-fancybox nobrd' style='height: 1.2rem; padding: 0px; vertical-align: text-bottom'></img></div><a id="more"></a><p>短视频。视频来源：Firefox 官网。</p><div style="text-align:center"><video src="https://assets.mozilla.net/video/red-pandas.webm" controls="controls" width="96%">火狐的小熊猫。</video></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 火狐 </tag>
+            
+            <tag> 小熊猫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>UserStress 教程</title>
       <link href="/2020/07/19/userstress-tutorial-zh/"/>
       <url>/2020/07/19/userstress-tutorial-zh/</url>
@@ -281,9 +308,9 @@
             
             <tag> 范德华异质结 </tag>
             
-            <tag> 费米能级钉扎 </tag>
-            
             <tag> 肖特基接触 </tag>
+            
+            <tag> 费米能级钉扎 </tag>
             
             <tag> 肖特基-莫特极限 </tag>
             
@@ -343,9 +370,9 @@
             
             <tag> 文献 </tag>
             
-            <tag> 非平衡格林函数理论 </tag>
-            
             <tag> 量子输运 </tag>
+            
+            <tag> 非平衡格林函数理论 </tag>
             
             <tag> 二维材料 </tag>
             
@@ -411,13 +438,13 @@
             
             <tag> 文献 </tag>
             
-            <tag> 密度泛函理论 </tag>
-            
-            <tag> 非平衡格林函数理论 </tag>
-            
             <tag> 电子器件 </tag>
             
             <tag> 量子输运 </tag>
+            
+            <tag> 密度泛函理论 </tag>
+            
+            <tag> 非平衡格林函数理论 </tag>
             
             <tag> 亚阈值摆幅 </tag>
             
@@ -504,9 +531,9 @@
       
         <tags>
             
-            <tag> 密度泛函理论 </tag>
-            
             <tag> 量子输运 </tag>
+            
+            <tag> 密度泛函理论 </tag>
             
             <tag> 固体物理 </tag>
             
