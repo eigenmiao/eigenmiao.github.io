@@ -1,0 +1,622 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="DigitalPalette Tutorial"><meta name="keywords" content="教程,DigitalPalette,Tutorial"><meta name="author" content="喵函数,eigenmiao@outlook.com"><meta name="copyright" content="喵函数"><title>DigitalPalette Tutorial | 本征喵的小站</title><link rel="shortcut icon" href="https://gitee.com/eigenmiao/rtos/raw/master/png/801e1795f4652a6f8ecc33c038e4515a.png"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://hm.baidu.com"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?85cbedcec4cd94e719fa5367b345fa13";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><script src="/myjs/opacity.js"></script><meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body onscroll="muscrolling()"><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Version"><span class="toc-number">1.</span> <span class="toc-text">Version</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Installation"><span class="toc-number">2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Usage"><span class="toc-number">3.</span> <span class="toc-text">Usage</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Change-the-language"><span class="toc-number">3.1.</span> <span class="toc-text">Change the language</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interface-Layout"><span class="toc-number">3.2.</span> <span class="toc-text">Interface Layout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Creating-a-set-of-colors-from-color-wheel"><span class="toc-number">3.3.</span> <span class="toc-text">Creating a set of colors from color wheel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Color-Harmony-Rules"><span class="toc-number">3.4.</span> <span class="toc-text">Color Harmony Rules</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Locating-a-set-of-colors-from-color-image"><span class="toc-number">3.5.</span> <span class="toc-text">Locating a set of colors from color image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Attaching-a-set-of-colors-into-color-depot"><span class="toc-number">3.6.</span> <span class="toc-text">Attaching a set of colors into color depot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">3.7.</span> <span class="toc-text">Example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Open-and-Save-Color-Depot-and-Import-and-Export-Color-Set"><span class="toc-number">3.8.</span> <span class="toc-text">Open and Save Color Depot and Import and Export Color Set</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#File-Formats"><span class="toc-number">3.8.1.</span> <span class="toc-text">File Formats</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Shortcuts"><span class="toc-number">4.</span> <span class="toc-text">Shortcuts</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Author"><span class="toc-number">5.</span> <span class="toc-text">Author</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Copyright"><span class="toc-number">6.</span> <span class="toc-text">Copyright</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#License"><span class="toc-number">7.</span> <span class="toc-text">License</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://gitee.com/eigenmiao/rtos/raw/master/webp/d5eebf6397f4d0608fd88fe0210175b5.webp"></div><div class="author-info__name text-center">喵函数</div><div class="author-info__description text-center">在读研究生一枚</div><div class="follow-button"><a href="https://github.com/liujiacode" target="_blank" rel="noopener">关注</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">20</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">35</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gitee.com/eigenmiao/rtos/raw/master/webp/91b327aae6032dca3f7febdc1cd9bd00.webp)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">本征喵的小站</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/digipale">色彩</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title" style="color: #FFF159; font-weight: bold">DigitalPalette Tutorial</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-02-23</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.8k</span><span class="post-meta__separator">|</span><span>阅读时长: 11 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>DigitalPalette is a free software for generating a set of harmonious colors from color wheel or existed images and applying it into your creative works.</p>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><a id="more"></a>
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/images/repository.png' alt='<div>
+DigitalPalette icon.
+</div>' width='90%'></img>
+</div>
+
+<h1 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h1><p>2.2.3 (Develop)</p>
+<h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><ol>
+<li><p>Double click the installer and click “<strong>Next</strong>“.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/installation/0.png" alt="Interface"></p>
+</li>
+<li><p>Read the <a href="../LICENSE">License</a>. Check “<strong>I accept the terms of the License Aggrement</strong>“ if you agree with it, then click “<strong>Next</strong>“.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/installation/1.png" alt="License"></p>
+</li>
+<li><p>Choose a directory and click “<strong>Install</strong>“ to start the installation.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/installation/2.png" alt="Directory"></p>
+</li>
+<li><p>Click “<strong>Finish</strong>“ to finish the installation and run DigitalPalette.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/installation/3.png" alt="Finish"></p>
+</li>
+</ol>
+<h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><h2 id="Change-the-language"><a href="#Change-the-language" class="headerlink" title="Change the language"></a>Change the language</h2><p>Currently we only provide English and Chinese interface translations. You could change the interface language through:  </p>
+<ol>
+<li>Click “<strong>Edit</strong>“ in the <strong>menu bar</strong> and select “<strong>Settings</strong>“ to open the settings dialog.</li>
+<li>Click the combo box lateral to “<strong>Language</strong>“ label in “<strong>Software</strong>“ tab. Select the target language and click “<strong>OK</strong>“ to change the interface language.</li>
+</ol>
+<h2 id="Interface-Layout"><a href="#Interface-Layout" class="headerlink" title="Interface Layout"></a>Interface Layout</h2><p>The Interface layout of DigitalPalette includes:  </p>
+<ol>
+<li><strong>Title bar</strong>, which include the name of software (DigitalPalette and current version (v2.1.1-dev).</li>
+<li><strong>Menu bar</strong>, which include “<strong>File</strong>“, “<strong>Edit</strong>“, “<strong>View</strong>“, “<strong>Window</strong>“ and “<strong>Help</strong>“ selections.</li>
+<li><strong>Work area</strong>, which provide actions such as <strong>creating</strong> a set of colors from color wheel, <strong>locating</strong> a set of colors from color image and <strong>attaching</strong> a set of colors into color depot.</li>
+<li><strong>Rule window</strong>, which set harmony rule and synchronization method for color set.</li>
+<li><strong>Filter window</strong>, which set category and channel for opened image.</li>
+<li><strong>Operation window</strong>, which manipulate files and work area.</li>
+<li><strong>Mode window</strong>, which set display mode for color set result.</li>
+<li><strong>Move window</strong>, which move and zoom image and depot content.</li>
+<li><strong>Result window</strong>, which display and modify color set result.</li>
+</ol>
+<h2 id="Creating-a-set-of-colors-from-color-wheel"><a href="#Creating-a-set-of-colors-from-color-wheel" class="headerlink" title="Creating a set of colors from color wheel"></a>Creating a set of colors from color wheel</h2><p>Color wheel is the default view of <strong>work area</strong>. You could click “<strong>View</strong>“ in the <strong>menu bar</strong> and select “<strong>Wheel</strong>“ to switch into color wheel view if your current <strong>work area</strong> view isn’t color wheel. The color wheel view is shown as below.<br>There are five color tags in ring shape above the color wheel in work area, which corresponding to the five color squares in <strong>result window</strong> (where the central color square determins the major color). You could change the corresponding color by dragging the tag, or adjust the sliders of RGB or HSV in <strong>result window</strong> to control its color accurately. Meanwhile, the position and color of other tags on color wheel would also changed according to the selected harmony rule. The harmony rule could be settled in <strong>rule window</strong>.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/08.png" alt="Wheel"></p>
+<h2 id="Color-Harmony-Rules"><a href="#Color-Harmony-Rules" class="headerlink" title="Color Harmony Rules"></a>Color Harmony Rules</h2><ol>
+<li><p><strong>Analogous</strong><br>Analogous is the default rule. You could create a set of colors with hue values in equidistant distributions in this rule. Note that the closer the tags, the more analogous the colors.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/00.png" alt="Analogous"></p>
+</li>
+<li><p><strong>Monochromatic</strong><br>You could create a set of colors with same hue and different saturation and lightness values in this rule.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/01.png" alt="Monochromatic"></p>
+</li>
+<li><p><strong>Triad</strong><br>You could create a set of colors with hue values in trigonal distributions in this rule.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/02.png" alt="Triad"></p>
+</li>
+<li><p><strong>Tetrad</strong><br>You could create a set of colors with colors complementary to each other in pairs in this rule.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/03.png" alt="Tetrad"></p>
+</li>
+<li><p><strong>Pentad</strong><br>You could create a set of colors with hue values in pentagonal distributions in this rule.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/04.png" alt="Pentad"></p>
+</li>
+<li><p><strong>Complementary</strong><br>You could create a set of Complementary colors in this rule.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/05.png" alt="Complementary"></p>
+</li>
+<li><p><strong>Shades</strong><br>You could create a set of colors with same hue and saturation values and different lightness values in this rule.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/06.png" alt="Shades"></p>
+</li>
+<li><p><strong>Custom</strong><br>You could create a set of colors in custom in this rule.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/07.png" alt="Custom"></p>
+</li>
+</ol>
+<h2 id="Locating-a-set-of-colors-from-color-image"><a href="#Locating-a-set-of-colors-from-color-image" class="headerlink" title="Locating a set of colors from color image"></a>Locating a set of colors from color image</h2><p>You could click “<strong>View</strong>“ in the <strong>menu bar</strong> and select “<strong>Graph</strong>“ to switch into color image view if your current <strong>work area</strong> view isn’t color image. The color image view is shown as below.<br>Left click anywhere above the image in <strong>work area</strong> after opening an existed image, and a color tag corresponding to the color square in <strong>result window</strong> would appeared at this position. Its color will also change into the corresponding color in image. Similarly, you could change the corresponding color by dragging the tag. Meanwhile, the position and color of other tags on color wheel would also changed according to the selected harmony rule. The harmony rule could be settled in <strong>rule window</strong>.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/09.png" alt="Image"></p>
+<h2 id="Attaching-a-set-of-colors-into-color-depot"><a href="#Attaching-a-set-of-colors-into-color-depot" class="headerlink" title="Attaching a set of colors into color depot"></a>Attaching a set of colors into color depot</h2><p>You could click “<strong>View</strong>“ in the <strong>menu bar</strong> and select “<strong>Depot</strong>“ to switch into color depot view if your current <strong>work area</strong> view isn’t color depot. The color depot view is shown as below.<br>You could add, delete, modify and check the stored color sets and their information in color depot. Each icon in color depot includes five color squares, which are corresponding to the five colors of color set. Note that the color of central square represents the major color.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/usage/10.png" alt="Depot"></p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><ol>
+<li><p>Switch <strong>work area</strong> into color image view and open the image below. This image could be found in samples folder under the install directory of DigitalPalette.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/H_range.png" alt="Sample"></p>
+</li>
+<li><p>The interface of DigitalPalette is shown as below after open an image.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/0.png" alt="Open"></p>
+</li>
+<li><p>Change the harmony rule in <strong>rule window</strong> into “Custom” and click the third color square in <strong>result window</strong>, then click the center purple area in image. It could be seen that a color tag is appeared at where we clicked. Meanwhile, the color of the third color square has changed into purple. Similarly, we could settle the color of other color squares as the other colors in image.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/1.png" alt="Locate"></p>
+</li>
+<li><p>Switch <strong>work area</strong> into color depot view. The interface of DigitalPalette is shown as below.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/2.png" alt="Depot"></p>
+</li>
+<li><p>Double click the last empty color set icon and add the color set we located from image into color depot.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/3.png" alt="Attach"></p>
+</li>
+<li><p>Right click the added color set icon and click “Detail” and open the color set information dialog.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/4.png" alt="Check"></p>
+</li>
+<li><p>We could check the colors and harmony rule of color set and modify the name and description of color set. It could be seen that the harmony rule of this color set is “Custom” and it is mainly composed of blue, green, purple, yellow and red, where purple is the major color. Click the editor beside “Name” and modify the name as “My first color set”. Click the editor below “Description” and modify the description as “This is my first color set collected from a DigitalPalette image sample.”<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/5.png" alt="Modify"></p>
+</li>
+<li><p>Switch <strong>work area</strong> into color wheel view and check the distribution of each color in this color set. It could be seen that these colors are distribute in pentad shape, and the saturation and lightness of colors are extremely high.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/6.png" alt="Distribution"></p>
+</li>
+<li><p>We could change the harmony rule into “Pentad” according to the distribution of colors as discussed above. Then we could drag the color tag and lower their saturation and lightness and get the other color set.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/7.png" alt="Modify"></p>
+</li>
+<li><p>Switch <strong>work area</strong> into color depot view and add this color set into color depot, check and modify the information of this color set in the same way.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/example/8.png" alt="Attach"></p>
+</li>
+</ol>
+<h2 id="Open-and-Save-Color-Depot-and-Import-and-Export-Color-Set"><a href="#Open-and-Save-Color-Depot-and-Import-and-Export-Color-Set" class="headerlink" title="Open and Save Color Depot and Import and Export Color Set"></a>Open and Save Color Depot and Import and Export Color Set</h2><p>All color sets in depot or color set in current result could be exported and save as readable and writable files or other formated files for subsequent usage and analysis. Steps:  </p>
+<ol>
+<li><p>Click the “<strong>Save</strong>“ button in <strong>operation window</strong> and fill the file name and path in opened dialog. Click “Save” to export all color sets in depot.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/operation/1.png" alt="Save"></p>
+</li>
+<li><p>Click the “<strong>Open</strong>“ button in <strong>operation window</strong> and fill the file name and path in opened dialog. Click “Open” to import all color sets in file.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/operation/0.png" alt="Open"></p>
+</li>
+<li><p>Click the “<strong>Export</strong>“ button in <strong>operation window</strong> and fill the file name and path in opened dialog. Click “Save” to export the color set in current result.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/operation/3.png" alt="Export"></p>
+</li>
+<li><p>Click the “<strong>Import</strong>“ button in <strong>operation window</strong> and fill the file name and path in opened dialog. Click “Open” to import the color set saved in file.<br><img src="https://gitee.com/eigenmiao/exam/raw/master/en/operation/2.png" alt="Import"></p>
+</li>
+</ol>
+<h3 id="File-Formats"><a href="#File-Formats" class="headerlink" title="File Formats"></a>File Formats</h3><ol>
+<li><p>DigiPale Json File (*.json)<br>File in this format contains all color data, including the harmony rule, hex code, RGB and HSV values of colors. This type of file could be used as backups and can be imported (recovered) into DigitalPalette.</p>
+</li>
+<li><p>Plain Text File (*.txt)<br>File in this format contains basic color data, including the hex code, RGB and HSV values of colors. This type of file has batter readability than DigiPale Json File and can be opened, readed and edited by ordinary editors directly.</p>
+</li>
+<li><p>Adobe Swatch File (*.aco)<br>File in this format contains all color values and can be imported into image processing softwares such as Photoshop and GIMP as color swatches.</p>
+</li>
+</ol>
+<h1 id="Shortcuts"><a href="#Shortcuts" class="headerlink" title="Shortcuts"></a>Shortcuts</h1><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Work Area</td>
+<td>#</td>
+<td>#</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a color depot file.</td>
+<td>Alt+O; Ctrl+O</td>
+</tr>
+<tr>
+<td>Save</td>
+<td>Save a color depot file.</td>
+<td>Alt+S; Ctrl+S</td>
+</tr>
+<tr>
+<td>Import</td>
+<td>Import a color set file.</td>
+<td>Alt+I; Ctrl+I</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>Export a color set file.</td>
+<td>Alt+E; Ctrl+E</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>Set settings.</td>
+<td>Alt+T; `</td>
+</tr>
+<tr>
+<td>Quit</td>
+<td>Quit software.</td>
+<td>Alt+Q; Esc</td>
+</tr>
+<tr>
+<td>Create</td>
+<td>Switch into color wheel view or (and) create a set of colors from wheel.</td>
+<td>Alt+C; Ctrl+W</td>
+</tr>
+<tr>
+<td>Locate</td>
+<td>Switch into color image view or (and) locate a set of colors from image.</td>
+<td>Alt+L; Ctrl+G</td>
+</tr>
+<tr>
+<td>Attach</td>
+<td>Switch into color depot view or (and) attach a set of colors into depot.</td>
+<td>Alt+A; Ctrl+D</td>
+</tr>
+<tr>
+<td>Homepage</td>
+<td>Open the homepage website through web browser.</td>
+<td>Alt+H; F1</td>
+</tr>
+<tr>
+<td>Update</td>
+<td>Search for software updates through web browser.</td>
+<td>Alt+U; F2</td>
+</tr>
+<tr>
+<td>About</td>
+<td>Display information relative to this software.</td>
+<td>Alt+B; F3</td>
+</tr>
+<tr>
+<td>Result Area</td>
+<td>#</td>
+<td>#</td>
+</tr>
+<tr>
+<td>Copy Tagged RGB</td>
+<td>Copy the RGB value (single) tagged by color tag into system clipboard.</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Copy Tagged HSV</td>
+<td>Copy the HSV value (single) tagged by color tag into system clipboard.</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Copy Tagged Hex</td>
+<td>Copy the Hex code (single) tagged by color tag into system clipboard.</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Copy RGB Result</td>
+<td>Copy all RGB values (five) in result into system clipboard.</td>
+<td>Shift+R</td>
+</tr>
+<tr>
+<td>Copy HSV Result</td>
+<td>Copy all HSV values (five) in result into system clipboard.</td>
+<td>Shift+H</td>
+</tr>
+<tr>
+<td>Copy Hex Result</td>
+<td>Copy all RGB codes (five) in result into system clipboard.</td>
+<td>Shift+X</td>
+</tr>
+<tr>
+<td>Activate Tag</td>
+<td>Activate the corresponding color tag in color wheel.</td>
+<td>1; 2; 3; 4; 5</td>
+</tr>
+<tr>
+<td>Depot Area</td>
+<td>#</td>
+<td>#</td>
+</tr>
+<tr>
+<td>Copy Current RGB</td>
+<td>Copy the RGB values (five) selected in depot into system clipboard.</td>
+<td>Ctrl+R</td>
+</tr>
+<tr>
+<td>Copy Current HSV</td>
+<td>Copy the RGB values (five) selected in depot into system clipboard.</td>
+<td>Ctrl+H</td>
+</tr>
+<tr>
+<td>Copy Current Hex</td>
+<td>Copy the RGB values (five) selected in depot into system clipboard.</td>
+<td>Ctrl+X</td>
+</tr>
+<tr>
+<td>Delete from Depot</td>
+<td>Delete the selected color set from depot.</td>
+<td>Delete; D</td>
+</tr>
+<tr>
+<td>Insert into Depot</td>
+<td>Attach the color set in result area into depot or import the selected color set into result area.</td>
+<td>Insert; I</td>
+</tr>
+<tr>
+<td>Move Actions</td>
+<td>#</td>
+<td>#</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Move the opened image.</td>
+<td>↑; ↓; ←; →</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Zoom the opened image.</td>
+<td>=; -; [; ]</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>Reset the position and size of image.</td>
+<td>Home</td>
+</tr>
+</tbody></table>
+<h1 id="Author"><a href="#Author" class="headerlink" title="Author"></a>Author</h1><div><span title="Send me a mail"><script>var name='eigenmiao'; var extn='outlook.com'; document.write('<a href="mailto:' + name + '@' + extn + '"><i class="fa fa-user fa-2x"></i> Eigenmiao</a>')</script></span></div>
+
+<h1 id="Copyright"><a href="#Copyright" class="headerlink" title="Copyright"></a>Copyright</h1><div><span>Copyright © 2019-2020 </span><span title="Send me a mail"><script>var name='eigenmiao'; var extn='outlook.com'; document.write('<a href="mailto:' + name + '@' + extn + '">Eigenmiao</a>')</script></span>. All Rights Reserved.</div>
+
+<h1 id="License"><a href="#License" class="headerlink" title="License"></a>License</h1><p>DigitalPalette is a free software, which is distributed in the hope that it will be useful, but without any warranty. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the <a href="https://www.gnu.org/licenses/" target="_blank" rel="noopener">GNU General Public License 3.0 (GPL 3.0)</a> for more details.</p>
+<p>All images (including <a href="https://github.com/liujiacode/DigitalPalette/tree/master/src/main/icons" target="_blank" rel="noopener">logo</a> and <a href="https://github.com/liujiacode/DigitalPalette/tree/master/src/main/resources" target="_blank" rel="noopener">sample</a> images, etc.), documents and translations in DigitalPalette <a href="https://github.com/liujiacode/DigitalPalette" target="_blank" rel="noopener">code repository</a> are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike License 4.0 (CC BY-NC-SA 4.0)</a> unless stating additionally.</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:eigenmiao@outlook.com">喵函数</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://eigenmiao.site/2020/02/23/digipale-exam-en/">https://eigenmiao.site/2020/02/23/digipale-exam-en/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://eigenmiao.site">本征喵的小站</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/DigitalPalette/">DigitalPalette</a><a class="post-meta__tags" href="/tags/Tutorial/">Tutorial</a></div><div class="social-share pull-right"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/02/interest/"><i class="fa fa-chevron-left">  </i><span>一些有趣的东西</span></a></div><div class="next-post pull-right"><a href="/2020/02/23/digipale-exam-zh/"><span>DigitalPalette 教程</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment" style="margin: 3.0em 1.2em 1.0em 1.2em"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'true' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+var localeName = 'my-own'
+var localeMode = {nick:"姓名",mail:"邮箱",link:"个人主页",nickFail:"姓名不能少于2个字符",mailFail:"请填写正确的邮件地址",sofa:"来发评论吧~",submit:"提交",reply:"回复",cancelReply:"取消回复",comments:"评论",cancel:"取消",confirm:"确认",continue:"继续",more:"加载更多...",preview:"预览",emoji:"表情",expand:"查看更多...",seconds:"秒前",minutes:"分钟前",hours:"小时前",days:"天前",now:"刚刚",uploading:"正在传输...",uploadDone:"传输完成!",busy:"操作频繁，请稍候再试...","code-98":"Valine 初始化失败，请检查 av-min.js 版本","code-99":"Valine 初始化失败，请检查init中的`el`元素.","code-100":"Valine 初始化失败，请检查你的AppId和AppKey.","code-140":"今日 API 调用总次数已超过开发版限制.","code-401":"未经授权的操作，请检查你的AppId和AppKey.","code-403":"访问被API域名白名单拒绝，请检查你的安全域名设置."}
+
+window.valine = new Valine();
+
+window.valine.init({
+  el:'#vcomment',
+  notify:false,
+  verify:true,
+  recordIP:true,
+  enableQQ:true,
+  requiredFields:['mail'],
+  appId:'sVhWBkYRKiYJotRtiVEP9BWA-MdYXbMMI',
+  appKey:'3Kpj3Sgp6egjsyhsg5t8C4Cz',
+  placeholder:'说点什么吧 (●´∀｀●)',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: localeName,
+  langMode: localeMode,
+  emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/emoji/valine/',
+  emojiMaps: {
+    "qq-000": "qq/qq-1.gif",
+    "qq-001": "qq/qq-2.gif",
+    "qq-002": "qq/qq-3.gif",
+    "qq-003": "qq/qq-4.gif",
+    "qq-004": "qq/qq-5.gif",
+    "qq-005": "qq/qq-6.gif",
+    "qq-006": "qq/qq-7.gif",
+    "qq-007": "qq/qq-8.gif",
+    "qq-008": "qq/qq-9.gif",
+    "qq-009": "qq/qq-10.gif",
+    "qq-010": "qq/qq-11.gif",
+    "qq-011": "qq/qq-12.gif",
+    "qq-012": "qq/qq-13.gif",
+    "qq-013": "qq/qq-14.gif",
+    "qq-014": "qq/qq-15.gif",
+    "qq-015": "qq/qq-16.gif",
+    "qq-016": "qq/qq-17.gif",
+    "qq-017": "qq/qq-18.gif",
+    "qq-018": "qq/qq-19.gif",
+    "qq-019": "qq/qq-20.gif",
+    "qq-020": "qq/qq-21.gif",
+    "qq-021": "qq/qq-22.gif",
+    "qq-022": "qq/qq-23.gif",
+    "qq-023": "qq/qq-24.gif",
+    "qq-024": "qq/qq-25.gif",
+    "qq-025": "qq/qq-26.gif",
+    "qq-026": "qq/qq-27.gif",
+    "qq-027": "qq/qq-28.gif",
+    "qq-028": "qq/qq-29.gif",
+    "qq-029": "qq/qq-30.gif",
+    "qq-030": "qq/qq-31.gif",
+    "qq-031": "qq/qq-32.gif",
+    "qq-032": "qq/qq-33.gif",
+    "qq-033": "qq/qq-34.gif",
+    "qq-034": "qq/qq-35.gif",
+    "qq-035": "qq/qq-36.gif",
+    "qq-036": "qq/qq-37.gif",
+    "qq-037": "qq/qq-38.gif",
+    "qq-038": "qq/qq-39.gif",
+    "qq-039": "qq/qq-40.gif",
+    "qq-040": "qq/qq-41.gif",
+    "qq-041": "qq/qq-42.gif",
+    "qq-042": "qq/qq-43.gif",
+    "qq-043": "qq/qq-44.gif",
+    "qq-044": "qq/qq-45.gif",
+    "qq-045": "qq/qq-46.gif",
+    "qq-046": "qq/qq-47.gif",
+    "qq-047": "qq/qq-48.gif",
+    "qq-048": "qq/qq-49.gif",
+    "qq-049": "qq/qq-50.gif",
+    "qq-050": "qq/qq-51.gif",
+    "qq-051": "qq/qq-52.gif",
+    "qq-052": "qq/qq-53.gif",
+    "qq-053": "qq/qq-54.gif",
+    "qq-054": "qq/qq-55.gif",
+    "qq-055": "qq/qq-56.gif",
+    "qq-056": "qq/qq-57.gif",
+    "qq-057": "qq/qq-58.gif",
+    "qq-058": "qq/qq-59.gif",
+    "qq-059": "qq/qq-60.gif",
+    "qq-060": "qq/qq-61.gif",
+    "qq-061": "qq/qq-62.gif",
+    "qq-062": "qq/qq-63.gif",
+    "qq-063": "qq/qq-64.gif",
+    "qq-064": "qq/qq-65.gif",
+    "qq-065": "qq/qq-66.gif",
+    "qq-066": "qq/qq-67.gif",
+    "qq-067": "qq/qq-68.gif",
+    "qq-068": "qq/qq-69.gif",
+    "qq-069": "qq/qq-70.gif",
+    "qq-070": "qq/qq-71.gif",
+    "qq-071": "qq/qq-72.gif",
+    "qq-072": "qq/qq-73.gif",
+    "qq-073": "qq/qq-74.gif",
+    "qq-074": "qq/qq-75.gif",
+    "qq-075": "qq/qq-76.gif",
+    "qq-076": "qq/qq-77.gif",
+    "qq-077": "qq/qq-78.gif",
+    "qq-078": "qq/qq-79.gif",
+    "qq-079": "qq/qq-80.gif",
+    "qq-080": "qq/qq-81.gif",
+    "qq-081": "qq/qq-82.gif",
+    "qq-082": "qq/qq-83.gif",
+    "qq-083": "qq/qq-84.gif",
+    "qq-084": "qq/qq-85.gif",
+    "qq-085": "qq/qq-86.gif",
+    "qq-086": "qq/qq-87.gif",
+    "qq-087": "qq/qq-88.gif",
+    "qq-088": "qq/qq-89.gif",
+    "qq-089": "qq/qq-90.gif",
+    "qq-090": "qq/qq-91.gif",
+    "qq-091": "qq/qq-92.gif",
+    "qq-092": "qq/qq-93.gif",
+    "qq-093": "qq/qq-94.gif",
+    "qq-094": "qq/qq-95.gif",
+    "qq-095": "qq/qq-96.gif",
+    "qq-096": "qq/qq-97.gif",
+    "qq-097": "qq/qq-98.gif",
+    "qq-098": "qq/qq-99.gif",
+    "qq-099": "qq/qq-100.gif",
+    "qq-100": "qq/qq-101.gif",
+    "tieba-000": "tieba/tieba-1.png",
+    "tieba-001": "tieba/tieba-2.png",
+    "tieba-002": "tieba/tieba-3.png",
+    "tieba-003": "tieba/tieba-4.png",
+    "tieba-004": "tieba/tieba-5.png",
+    "tieba-005": "tieba/tieba-6.png",
+    "tieba-006": "tieba/tieba-7.png",
+    "tieba-007": "tieba/tieba-8.png",
+    "tieba-008": "tieba/tieba-9.png",
+    "tieba-009": "tieba/tieba-10.png",
+    "tieba-010": "tieba/tieba-11.png",
+    "tieba-011": "tieba/tieba-12.png",
+    "tieba-012": "tieba/tieba-13.png",
+    "tieba-013": "tieba/tieba-14.png",
+    "tieba-014": "tieba/tieba-15.png",
+    "tieba-015": "tieba/tieba-16.png",
+    "tieba-016": "tieba/tieba-17.png",
+    "tieba-017": "tieba/tieba-18.png",
+    "tieba-018": "tieba/tieba-19.png",
+    "tieba-019": "tieba/tieba-20.png",
+    "tieba-020": "tieba/tieba-21.png",
+    "tieba-021": "tieba/tieba-22.png",
+    "tieba-022": "tieba/tieba-23.png",
+    "tieba-023": "tieba/tieba-24.png",
+    "tieba-024": "tieba/tieba-25.png",
+    "tieba-025": "tieba/tieba-26.png",
+    "tieba-026": "tieba/tieba-27.png",
+    "tieba-027": "tieba/tieba-28.png",
+    "tieba-028": "tieba/tieba-29.png",
+    "tieba-029": "tieba/tieba-30.png",
+    "tieba-030": "tieba/tieba-31.png",
+    "tieba-031": "tieba/tieba-32.png",
+    "tieba-032": "tieba/tieba-33.png",
+    "tieba-033": "tieba/tieba-34.png",
+    "tieba-034": "tieba/tieba-35.png",
+    "tieba-035": "tieba/tieba-36.png",
+    "tieba-036": "tieba/tieba-37.png",
+    "tieba-037": "tieba/tieba-38.png",
+    "tieba-038": "tieba/tieba-39.png",
+    "tieba-039": "tieba/tieba-40.png",
+    "tieba-040": "tieba/tieba-41.png",
+    "tieba-041": "tieba/tieba-42.png",
+    "tieba-042": "tieba/tieba-43.png",
+    "tieba-043": "tieba/tieba-44.png",
+    "tieba-044": "tieba/tieba-45.png",
+    "tieba-045": "tieba/tieba-46.png",
+    "tieba-046": "tieba/tieba-47.png",
+    "tieba-047": "tieba/tieba-48.png",
+    "tieba-048": "tieba/tieba-49.png",
+    "tieba-049": "tieba/tieba-50.png",
+    "tieba-050": "tieba/tieba-51.png",
+    "tieba-051": "tieba/tieba-52.png",
+    "tieba-052": "tieba/tieba-53.png",
+    "tieba-053": "tieba/tieba-54.png",
+    "twemoji-000": "twemoji/twemoji-1.png",
+    "twemoji-001": "twemoji/twemoji-2.png",
+    "twemoji-002": "twemoji/twemoji-3.png",
+    "twemoji-003": "twemoji/twemoji-4.png",
+    "twemoji-004": "twemoji/twemoji-5.png",
+    "twemoji-005": "twemoji/twemoji-6.png",
+    "twemoji-006": "twemoji/twemoji-7.png",
+    "twemoji-007": "twemoji/twemoji-8.png",
+    "twemoji-008": "twemoji/twemoji-9.png",
+    "twemoji-009": "twemoji/twemoji-10.png",
+    "twemoji-010": "twemoji/twemoji-11.png",
+    "twemoji-011": "twemoji/twemoji-12.png",
+    "twemoji-012": "twemoji/twemoji-13.png",
+    "twemoji-013": "twemoji/twemoji-14.png",
+    "twemoji-014": "twemoji/twemoji-15.png",
+    "twemoji-015": "twemoji/twemoji-16.png",
+    "twemoji-016": "twemoji/twemoji-17.png",
+    "twemoji-017": "twemoji/twemoji-18.png",
+    "twemoji-018": "twemoji/twemoji-19.png",
+    "twemoji-019": "twemoji/twemoji-20.png",
+    "twemoji-020": "twemoji/twemoji-21.png",
+    "twemoji-021": "twemoji/twemoji-22.png",
+    "twemoji-022": "twemoji/twemoji-23.png",
+    "twemoji-023": "twemoji/twemoji-24.png",
+    "twemoji-024": "twemoji/twemoji-25.png",
+    "twemoji-025": "twemoji/twemoji-26.png",
+    "twemoji-026": "twemoji/twemoji-27.png",
+    "twemoji-027": "twemoji/twemoji-28.png",
+    "twemoji-028": "twemoji/twemoji-29.png",
+    "twemoji-029": "twemoji/twemoji-30.png",
+    "twemoji-030": "twemoji/twemoji-31.png",
+    "twemoji-031": "twemoji/twemoji-32.png",
+    "twemoji-032": "twemoji/twemoji-33.png",
+    "twemoji-033": "twemoji/twemoji-34.png",
+    "twemoji-034": "twemoji/twemoji-35.png",
+    "twemoji-035": "twemoji/twemoji-36.png",
+    "twemoji-036": "twemoji/twemoji-37.png",
+    "twemoji-037": "twemoji/twemoji-38.png",
+    "twemoji-038": "twemoji/twemoji-39.png",
+    "twemoji-039": "twemoji/twemoji-40.png",
+    "twemoji-040": "twemoji/twemoji-41.png",
+    "twemoji-041": "twemoji/twemoji-42.png",
+    "twemoji-042": "twemoji/twemoji-43.png",
+    "twemoji-043": "twemoji/twemoji-44.png",
+    "twemoji-044": "twemoji/twemoji-45.png",
+    "twemoji-045": "twemoji/twemoji-46.png",
+    "twemoji-046": "twemoji/twemoji-47.png",
+    "twemoji-047": "twemoji/twemoji-48.png",
+    "twemoji-048": "twemoji/twemoji-49.png",
+    "twemoji-049": "twemoji/twemoji-50.png",
+    "twemoji-050": "twemoji/twemoji-51.png",
+    "twemoji-051": "twemoji/twemoji-52.png",
+    "twemoji-052": "twemoji/twemoji-53.png",
+    "twemoji-053": "twemoji/twemoji-54.png",
+    "twemoji-054": "twemoji/twemoji-55.png",
+    "twemoji-055": "twemoji/twemoji-56.png",
+    "twemoji-056": "twemoji/twemoji-57.png",
+    "twemoji-057": "twemoji/twemoji-58.png",
+    "twemoji-058": "twemoji/twemoji-59.png",
+    "twemoji-059": "twemoji/twemoji-60.png",
+    "twemoji-060": "twemoji/twemoji-61.png",
+    "twemoji-061": "twemoji/twemoji-62.png",
+    "twemoji-062": "twemoji/twemoji-63.png",
+    "twemoji-063": "twemoji/twemoji-64.png",
+    "twemoji-064": "twemoji/twemoji-65.png",
+    "twemoji-065": "twemoji/twemoji-66.png",
+    "twemoji-066": "twemoji/twemoji-67.png",
+    "twemoji-067": "twemoji/twemoji-68.png",
+    "twemoji-068": "twemoji/twemoji-69.png",
+    "twemoji-069": "twemoji/twemoji-70.png",
+    "twemoji-070": "twemoji/twemoji-71.png",
+    "twemoji-071": "twemoji/twemoji-72.png",
+    "twemoji-072": "twemoji/twemoji-73.png",
+    "twemoji-073": "twemoji/twemoji-74.png",
+    "twemoji-074": "twemoji/twemoji-75.png",
+    "twemoji-075": "twemoji/twemoji-76.png",
+    "twemoji-076": "twemoji/twemoji-77.png",
+    "twemoji-077": "twemoji/twemoji-78.png",
+    "twemoji-078": "twemoji/twemoji-79.png",
+    "twemoji-079": "twemoji/twemoji-80.png",
+    "twemoji-080": "twemoji/twemoji-81.png",
+    "twemoji-081": "twemoji/twemoji-82.png",
+    "twemoji-082": "twemoji/twemoji-83.png",
+    "twemoji-083": "twemoji/twemoji-84.png",
+    "twemoji-084": "twemoji/twemoji-85.png",
+    "twemoji-085": "twemoji/twemoji-86.png",
+    "twemoji-086": "twemoji/twemoji-87.png",
+    "twemoji-087": "twemoji/twemoji-88.png",
+    "twemoji-088": "twemoji/twemoji-89.png",
+    "twemoji-089": "twemoji/twemoji-90.png",
+    "twemoji-090": "twemoji/twemoji-91.png",
+    "twemoji-091": "twemoji/twemoji-92.png",
+    "twemoji-092": "twemoji/twemoji-93.png",
+    "twemoji-093": "twemoji/twemoji-94.png",
+    "twemoji-094": "twemoji/twemoji-95.png",
+    "twemoji-095": "twemoji/twemoji-96.png",
+    "twemoji-096": "twemoji/twemoji-97.png",
+    "twemoji-097": "twemoji/twemoji-98.png",
+    "twemoji-098": "twemoji/twemoji-99.png",
+    "twemoji-099": "twemoji/twemoji-100.png",
+    "twemoji-100": "twemoji/twemoji-101.png",
+    "twemoji-101": "twemoji/twemoji-102.png",
+    "twemoji-102": "twemoji/twemoji-103.png",
+    "twemoji-103": "twemoji/twemoji-104.png",
+    "twemoji-104": "twemoji/twemoji-105.png",
+    "twemoji-105": "twemoji/twemoji-106.png",
+    "twemoji-106": "twemoji/twemoji-107.png",
+    "twemoji-107": "twemoji/twemoji-108.png",
+    "twemoji-108": "twemoji/twemoji-109.png",
+    "twemoji-109": "twemoji/twemoji-110.png",
+    "twemoji-110": "twemoji/twemoji-111.png",
+    "twemoji-111": "twemoji/twemoji-112.png",
+    "twemoji-112": "twemoji/twemoji-113.png",
+    "twemoji-113": "twemoji/twemoji-114.png",
+    "twemoji-114": "twemoji/twemoji-115.png",
+    "twemoji-115": "twemoji/twemoji-116.png",
+    "twemoji-116": "twemoji/twemoji-117.png",
+    "twemoji-117": "twemoji/twemoji-118.png",
+    "twemoji-118": "twemoji/twemoji-119.png",
+    "twemoji-119": "twemoji/twemoji-120.png",
+    "twemoji-120": "twemoji/twemoji-121.png",
+    "twemoji-121": "twemoji/twemoji-122.png",
+    "twemoji-122": "twemoji/twemoji-123.png",
+    "twemoji-123": "twemoji/twemoji-124.png",
+    "twemoji-124": "twemoji/twemoji-125.png",
+  },
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2020 By 喵函数</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
