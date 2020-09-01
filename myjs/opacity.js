@@ -1,7 +1,7 @@
 function muloading(){
     var foreimg = document.getElementById('foreimg');
 
-    foreimg.style.transition = "all 0.65s cubic-bezier(.5,0,1,.5)";
+    foreimg.style.transition = "all 0.45s cubic-bezier(0.55, 0, 1, 0.45)";
 
     if (window.innerHeight < window.innerWidth) {
         foreimg.style.transform = "scale(" + window.innerHeight / 900 + ")";
