@@ -1,7 +1,12 @@
 function muloading(){
     var foreimg = document.getElementById('foreimg');
 
-    foreimg.style.transition = "all 0.45s cubic-bezier(0.55, 0, 1, 0.45)";
+    if (window.location.pathname == "/") {
+        foreimg.style.transition = "all 0.45s cubic-bezier(0.55, 0, 1, 0.45) 0.05s";
+    } else {
+        foreimg.style.transition = "none";
+        foreimg.style.transition = "opacity 0.1s cubic-bezier(0.55, 0, 1, 0.45) 0.05s";
+    };
 
     if (window.innerHeight < window.innerWidth) {
         foreimg.style.transform = "scale(" + window.innerHeight / 900 + ")";
