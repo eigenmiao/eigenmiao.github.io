@@ -4,8 +4,7 @@ function muloading(){
     if (window.location.pathname == "/") {
         foreimg.style.transition = "all 0.45s cubic-bezier(0.55, 0, 1, 0.45) 0.05s";
     } else {
-        foreimg.style.transition = "none";
-        foreimg.style.transition = "opacity 0.1s cubic-bezier(0.55, 0, 1, 0.45) 0.05s";
+        foreimg.style.transition = "filter 0.2s cubic-bezier(0.55, 0, 1, 0.45) 0.05s";
     };
 
     if (window.innerHeight < window.innerWidth) {
@@ -15,7 +14,7 @@ function muloading(){
         foreimg.style.transform = "scale(" + window.innerWidth / 1271 * 1.6 + ")";
     };
 
-    foreimg.style.opacity = 1.0;
+    foreimg.style.filter = "brightness(100%)";
 };
 
 function muscrolling(){
