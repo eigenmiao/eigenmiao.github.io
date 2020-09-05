@@ -31,6 +31,6 @@
     border: 0px solid greenyellow;
     max-height: none;
     max-width: none;
-    filter: brightness(0%);
+    filter: brightness(1000%);
     transform: scale(5);
 }
