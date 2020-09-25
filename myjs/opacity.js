@@ -2,9 +2,9 @@ function muloading(){
     var foreimg = document.getElementById('foreimg');
 
     if (window.location.pathname == "/") {
-        foreimg.style.transition = "all 0.45s cubic-bezier(0.55, 0, 1, 0.45) 0.05s";
+        foreimg.style.transition = "all 0.8s cubic-bezier(1.0, -1.5, 1.0, 1.0)";
     } else {
-        foreimg.style.transition = "filter 0.25s cubic-bezier(0.55, 0, 1, 0.45) 0.05s";
+        foreimg.style.transition = "all 0.8s cubic-bezier(1.0, -1.5, 1.0, 1.0)";
     };
 
     if (window.innerHeight < window.innerWidth) {
