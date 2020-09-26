@@ -564,12 +564,12 @@ footer.is-mobile {
   line-height: 1.5;
 }
 #site-title {
-  filter: drop-shadow(0.12em 0.12em 0em #000);
+  text-shadow: #405aae 3px 0 0, #405aae 0 3px 0, #405aae -3px 0 0, #405aae 0 -3px 0;
   font-weight: bold;
   font-size: 1.3rem;
 }
 #site-sub-title {
-  filter: drop-shadow(0.06em 0.06em 0em #000);
+  text-shadow: #405aae 1px 0 0, #405aae 0 1px 0, #405aae -1px 0 0, #405aae 0 -1px 0;
   font-size: 0.8rem;
 }
 #site-social-icons {
@@ -580,13 +580,13 @@ footer.is-mobile {
 #site-social-icons .social-icon {
   margin: 0 0.5rem;
   color: #fff159;
-  filter: drop-shadow(0.06em 0.06em 0em #000);
+  filter: drop-shadow(0.06em 0.06em 0em #405aae);
   font-size: 1.1rem;
   cursor: pointer;
 }
 #site-social-icons .social-icon:hover {
   color: #fff;
-  filter: drop-shadow(0.12em 0.12em 0em #000);
+  filter: drop-shadow(0.13em 0.13em 0em #405aae);
 }
 #site-social-icons .my-digipale {
   fill: #fff159;
@@ -636,6 +636,7 @@ footer.is-mobile {
 }
 #page-header .toggle-menu:hover {
   color: #fff159;
+  text-shadow: #405aae 1px 0 0, #405aae 0 1px 0, #405aae -1px 0 0, #405aae 0 -1px 0;
 }
 #page-header a {
   color: #000;
@@ -643,12 +644,13 @@ footer.is-mobile {
 }
 #page-header a:hover {
   color: #fff159;
+  text-shadow: #405aae 1px 0 0, #405aae 0 1px 0, #405aae -1px 0 0, #405aae 0 -1px 0;
 }
 #page-header .site-page {
   position: relative;
   margin-left: 0.6rem;
   padding-bottom: 0.3rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 #page-header .site-page::after {
@@ -665,6 +667,9 @@ footer.is-mobile {
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+#page-header .site-page:hover {
+  font-weight: bold;
 }
 #page-header .site-page:hover::after {
   width: 100%;
@@ -1140,7 +1145,8 @@ img.nobrd:hover {
   overflow: hidden;
 }
 #post-meta {
-  filter: drop-shadow(0.06em 0.06em 0em #000);
+  font-size: 0.9rem;
+  text-shadow: #405aae 1px 0 0, #405aae 0 1px 0, #405aae -1px 0 0, #405aae 0 -1px 0;
 }
 #post #post-meta {
   color: #858585;
@@ -1226,7 +1232,7 @@ img.nobrd:hover {
   text-align: center;
 }
 #top-container #post-title {
-  filter: drop-shadow(0.12em 0.12em 0em #000);
+  text-shadow: #405aae 3px 0 0, #405aae 0 3px 0, #405aae -3px 0 0, #405aae 0 -3px 0;
   font-size: 1.3rem;
 }
 #top-container i.fa.fa-angle-right {
