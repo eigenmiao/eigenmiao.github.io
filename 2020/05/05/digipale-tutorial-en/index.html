@@ -1,0 +1,1100 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="DigitalPalette Tutorial"><meta name="keywords" content="教程,DigitalPalette,Tutorial"><meta name="author" content="喵函数,eigenmiao@outlook.com"><meta name="copyright" content="喵函数"><title>DigitalPalette Tutorial | 本征喵的小站</title><link rel="shortcut icon" href="https://gitee.com/eigenmiao/rtos/raw/master/png/801e1795f4652a6f8ecc33c038e4515a.png"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://hm.baidu.com"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?85cbedcec4cd94e719fa5367b345fa13";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><script src="/myjs/opacity.js"></script><meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body onscroll="muscrolling()"><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Home-Page"><span class="toc-number">1.</span> <span class="toc-text">Home Page</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Repository"><span class="toc-number">2.</span> <span class="toc-text">Repository</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Author"><span class="toc-number">3.</span> <span class="toc-text">Author</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Version"><span class="toc-number">4.</span> <span class="toc-text">Version</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Downloads"><span class="toc-number">5.</span> <span class="toc-text">Downloads</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Installation"><span class="toc-number">6.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Interface-Layout"><span class="toc-number">7.</span> <span class="toc-text">Interface Layout</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Quick-Start"><span class="toc-number">8.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Example-1-Creating-a-Set-of-Colors-from-Color-Wheel"><span class="toc-number">8.1.</span> <span class="toc-text">Example 1: Creating a Set of Colors from Color Wheel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example-2-Locating-a-Set-of-Colors-from-Color-Image"><span class="toc-number">8.2.</span> <span class="toc-text">Example 2: Locating a Set of Colors from Color Image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example-3-Attaching-the-Created-Color-Set-into-Color-Depot"><span class="toc-number">8.3.</span> <span class="toc-text">Example 3: Attaching the Created Color Set into Color Depot</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Work-Area"><span class="toc-number">9.</span> <span class="toc-text">Work Area</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Creating-a-Set-of-Colors-from-Color-Wheel"><span class="toc-number">9.1.</span> <span class="toc-text">Creating a Set of Colors from Color Wheel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Locating-a-Set-of-Colors-from-Color-Image"><span class="toc-number">9.2.</span> <span class="toc-text">Locating a Set of Colors from Color Image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Attaching-the-Created-Color-Set-into-Color-Depot"><span class="toc-number">9.3.</span> <span class="toc-text">Attaching the Created Color Set into Color Depot</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rule-Window"><span class="toc-number">10.</span> <span class="toc-text">Rule Window</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Harmony-Rule"><span class="toc-number">10.1.</span> <span class="toc-text">Harmony Rule</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Synchro-Rule"><span class="toc-number">10.2.</span> <span class="toc-text">Synchro Rule</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Operation-Window"><span class="toc-number">11.</span> <span class="toc-text">Operation Window</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#File-Operation"><span class="toc-number">11.1.</span> <span class="toc-text">File Operation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#View-Operation"><span class="toc-number">11.2.</span> <span class="toc-text">View Operation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Process-Window"><span class="toc-number">12.</span> <span class="toc-text">Process Window</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Extract-Process"><span class="toc-number">12.1.</span> <span class="toc-text">Extract Process</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filter-Process"><span class="toc-number">12.2.</span> <span class="toc-text">Filter Process</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mode-Window"><span class="toc-number">13.</span> <span class="toc-text">Mode Window</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Display-Mode"><span class="toc-number">13.1.</span> <span class="toc-text">Display Mode</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Result-Window"><span class="toc-number">14.</span> <span class="toc-text">Result Window</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Shortcuts"><span class="toc-number">15.</span> <span class="toc-text">Shortcuts</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Common-Questions"><span class="toc-number">16.</span> <span class="toc-text">Common Questions</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-change-the-interface-language"><span class="toc-number">16.1.</span> <span class="toc-text">How to change the interface language?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-export-color-set-file-and-import-it-into-other-image-processors"><span class="toc-number">16.2.</span> <span class="toc-text">How to export color set file and import it into other image processors?</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Copyright"><span class="toc-number">17.</span> <span class="toc-text">Copyright</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#License"><span class="toc-number">18.</span> <span class="toc-text">License</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://gitee.com/eigenmiao/rtos/raw/master/webp/d5eebf6397f4d0608fd88fe0210175b5.webp"></div><div class="author-info__name text-center">喵函数</div><div class="author-info__description text-center">在读研究生一枚</div><div class="follow-button"><a href="https://github.com/liujiacode" target="_blank" rel="noopener">关注</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">23</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">35</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gitee.com/eigenmiao/rtos/raw/master/webp/91b327aae6032dca3f7febdc1cd9bd00.webp)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">本征喵的小站</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">主页</a><a class="site-page" href="/digipale">色彩</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title" style="color: #FFF159; font-weight: bold">DigitalPalette Tutorial</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-05-05</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">2.9k</span><span class="post-meta__separator">|</span><span>阅读时长: 18 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>DigitalPalette is a free software for generating a set of harmonious colors from a color wheel or an existed image and applying it into your creative works. You could store your favorite color sets in this software, and recover them in the next time. You could also export created color sets or color depots as color files, and place them anywhere, including network storage. Additionally, you could share these color files with your friends, or import them into other softwares, such as Adobe Photoshop, GIMP, Krita, Pencil 2D and Clip Studio Paint. DigitalPalette is written in PyQt5, and can perform well on Windows, Linux and other mainstream operating systems.</p>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><a id="more"></a>
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/images/repository.png' alt='<div>
+DigitalPalette icon.
+</div>' width='90%'></img>
+</div>
+
+<h1 id="Home-Page"><a href="#Home-Page" class="headerlink" title="Home Page"></a>Home Page</h1><p><a href="/digipale/"><i class="fa fa-home fa-2x"></i> https://eigenmiao.site/digipale/</a></p>
+<h1 id="Repository"><a href="#Repository" class="headerlink" title="Repository"></a>Repository</h1><p><a href="https://github.com/liujiacode/DigitalPalette" target="_blank" rel="noopener"><i class="fa fa-github fa-2x"></i> https://github.com/liujiacode/DigitalPalette</a></p>
+<h1 id="Author"><a href="#Author" class="headerlink" title="Author"></a>Author</h1><div><span title="Send me a mail"><script>var name='eigenmiao'; var extn='outlook.com'; document.write('<a href="mailto:' + name + '@' + extn + '"><i class="fa fa-user fa-2x"></i> Eigenmiao</a>')</script></span></div>
+
+<h1 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h1><p><a href="https://github.com/liujiacode/DigitalPalette/releases/tag/v2.2.10-pre" target="_blank" rel="noopener"><i class="fa fa-tag fa-2x"></i> 2.2.10 Preview</a></p>
+<h1 id="Downloads"><a href="#Downloads" class="headerlink" title="Downloads"></a>Downloads</h1><p>Download the latest version of DigitalPalette v2.2.10.<sup><a href="#alternative_sites">[*]</a></sup></p>
+<p>Please select suitable download files from the table below according to your operation systems and preferred languages. For Windows users, if you don’t know whether your system is 32 bit or 64 bit, please download the 32 bit edition file.</p>
+<table>
+<thead>
+<tr>
+<th>Operation System</th>
+<th>Language</th>
+<th>Installer</th>
+<th>Archive</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows (32 Bit)</td>
+<td>Chinese</td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_zh_windows_x86.exe" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/windows_x86.sha256" target="_blank" rel="noopener">Check</a></td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_zh_windows_x86.zip" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/windows_x86.md5" target="_blank" rel="noopener">Check</a></td>
+</tr>
+<tr>
+<td>Windows (32 Bit)</td>
+<td>English</td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_en_windows_x86.exe" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/windows_x86.sha256" target="_blank" rel="noopener">Check</a></td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_en_windows_x86.zip" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/windows_x86.md5" target="_blank" rel="noopener">Check</a></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Windows (64 Bit)</td>
+<td>Chinese</td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_zh_windows_x86_64.exe" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/windows_x86_64.sha256" target="_blank" rel="noopener">Check</a></td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_zh_windows_x86_64.zip" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/windows_x86_64.md5" target="_blank" rel="noopener">Check</a></td>
+</tr>
+<tr>
+<td>Windows (64 Bit)</td>
+<td>English</td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_en_windows_x86_64.exe" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/windows_x86_64.sha256" target="_blank" rel="noopener">Check</a></td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_en_windows_x86_64.zip" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/windows_x86_64.md5" target="_blank" rel="noopener">Check</a></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Ubuntu (64 Bit)</td>
+<td>Chinese</td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_zh_ubuntu_x86_64.deb" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/ubuntu_x86_64.sha256" target="_blank" rel="noopener">Check</a></td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_zh_ubuntu_x86_64.tar.gz" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/ubuntu_x86_64.md5" target="_blank" rel="noopener">Check</a></td>
+</tr>
+<tr>
+<td>Ubuntu (64 Bit)</td>
+<td>English</td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_en_ubuntu_x86_64.deb" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/ubuntu_x86_64.sha256" target="_blank" rel="noopener">Check</a></td>
+<td><a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/DigitalPalette_v2.2.10_pre_en_ubuntu_x86_64.tar.gz" target="_blank" rel="noopener">Download</a> - <a href="https://github.com/liujiacode/DigitalPalette/releases/download/v2.2.10-pre/ubuntu_x86_64.md5" target="_blank" rel="noopener">Check</a></td>
+</tr>
+</tbody></table>
+<p><sup id="alternative_sites">[*] Alternative download sites: <a href="https://github.com/liujiacode/DigitalPalette/releases/tag/v2.2.10-pre" target="_blank" rel="noopener">Github</a>, <a href="https://gitee.com/eigenmiao/DigitalPalette/releases/v2.2.10-pre" target="_blank" rel="noopener">Gitee</a>, <a href="https://sourceforge.net/projects/digitalpalette/files/v2.2.10/" target="_blank" rel="noopener">SourceForge</a> and <a href="https://pan.baidu.com/s/1R5eOHtX-SG5wXff0a34nMA" target="_blank" rel="noopener">Baidu Netdisk (code: 5m2j)</a>.</sup></p>
+<h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><ol><li>
+Double click the installer and click "<b>Next</b>".
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/30-install-1.webp' alt='<div>
+Start installation.
+</div>' width='52%'></img>
+</div>
+
+</li><li>
+Read the <a href='https://www.gnu.org/licenses/' target="_blank" rel="noopener">License</a>. Check "<b>I accept the terms of the License Aggrement</b>" if you agree with it, then click "<b>Next</b>".
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/30-install-2.webp' alt='<div>
+Read the license.
+</div>' width='52%'></img>
+</div>
+
+</li><li>
+Choose a directory and click "<b>Install</b>" to start the installation.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/30-install-3.webp' alt='<div>
+Choose a directory.
+</div>' width='52%'></img>
+</div>
+
+</li><li>
+Click "<b>Finish</b>" to finish the installation and run DigitalPalette.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/30-install-4.webp' alt='<div>
+Finish installation.
+</div>' width='52%'></img>
+</div>
+
+</li></ol>
+
+<h1 id="Interface-Layout"><a href="#Interface-Layout" class="headerlink" title="Interface Layout"></a>Interface Layout</h1><p>The Interface layout of DigitalPalette is shown in below, which includes:</p>
+<ul>
+<li><p>Title bar (red area), including the name of software (DigitalPalette) and current version (v2.2.8-dev).</p>
+</li>
+<li><p>Menu bar (yellow area), including “<strong>File</strong>“, “<strong>Edit</strong>“, “<strong>View</strong>“, “<strong>Window</strong>“ and “<strong>Help</strong>“ selections.</p>
+</li>
+<li><p>Status bar (pink area), providing the prompt information of the element around cursor.</p>
+</li>
+<li><p>Work area (green area), providing actions such as <strong>creating</strong> a set of colors from a color <strong>wheel</strong>, <strong>locating</strong> a set of colors from a color <strong>image</strong> and <strong>attaching</strong> a set of colors into a color <strong>depot</strong>.</p>
+</li>
+<li><p><strong>Rule</strong> window, setting the harmony and synchronization rules for color set.</p>
+</li>
+<li><p><strong>Detection</strong> window, performing edge and channel detections for image.</p>
+</li>
+<li><p><strong>Operation</strong> window, performing file and view operations.</p>
+</li>
+<li><p><strong>Process</strong> window, applying extract, filter, snap, crop and zoom processes to image.</p>
+</li>
+<li><p><strong>Mode</strong> window, setting the display modes for color set results.</p>
+</li>
+<li><p><strong>Adjustment</strong> window, applying position, size and color adjustment to image and color set.</p>
+</li>
+<li><p><strong>Result</strong> window, checking and modify the results of color set.</p>
+</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/00-workareas.webp' alt='<div>
+Interface layout.
+</div>' width='80%'></img>
+</div>
+
+<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="Example-1-Creating-a-Set-of-Colors-from-Color-Wheel"><a href="#Example-1-Creating-a-Set-of-Colors-from-Color-Wheel" class="headerlink" title="Example 1: Creating a Set of Colors from Color Wheel"></a>Example 1: Creating a Set of Colors from Color Wheel</h2><ol><li>
+Open the installed software DigitalPalette.
+
+</li><li>
+Click <b>View</b> in the menu bar and select "<b>Wheel</b>" in the drop-down list, and switch to wheel view (default view). Select "<b>Analogous</b>" in <b>harmony</b> selecting box in <b>rule</b> window. Then drag the <b>tags</b> on color <b>wheel</b>, and selecting a set of suitable analogous colors.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/01-analogous.webp' alt='<div>
+selecting a set of analogous colors.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+Click "<b>Export</b>" in <b>file</b> button box in <b>operation</b> window, and export this color set as a Adobe swatch file (\*.aco).
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/28-export-aco.webp' alt='<div>
+Export the color set.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+Open Adobe Photoshop, GIMP or other image processors and importing the exported file above. Then color the image with this color board.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/01-analogous-cube.webp' alt='<div>
+Image example coloring with the exported analogous color set.
+</div>' width='60%'></img>
+</div>
+
+</li><li>
+Return to the DigitalPalette, and select "<b>Triad</b>" in <b>harmony</b> selecting box in <b>rule</b> window. Then drag the <b>tags</b> on color <b>wheel</b>, and selecting a set of suitable triad colors.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/03-triad.webp' alt='<div>
+selecting a set of triad colors.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+Color the image in same way, and compare this impage with the imaged above.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/03-triad-cube.webp' alt='<div>
+Image example coloring with the exported triad color set.
+</div>' width='60%'></img>
+</div>
+
+</li></ol>
+
+<h2 id="Example-2-Locating-a-Set-of-Colors-from-Color-Image"><a href="#Example-2-Locating-a-Set-of-Colors-from-Color-Image" class="headerlink" title="Example 2: Locating a Set of Colors from Color Image"></a>Example 2: Locating a Set of Colors from Color Image</h2><ol><li>
+Open the installed software DigitalPalette.
+
+</li><li>
+Prepare a colorful picture. The picuture in example is created by Icyphantom and published on <a href='https://minecraft-zh.gamepedia.com/File:DogEatingIronPickaxe.png' target="_blank" rel="noopener"> Minecraft community website</a> licensed under Creative Commons Attribution-NonCommercial License 3.0 (<a href='https://creativecommons.org/licenses/by-nc/3.0/deed.en' target="_blank" rel="noopener">CC BY-NC 3.0</a>).
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/29-example.webp' alt='<div>
+A  picture on network, licensed under CC BY-NC 3.0 license.
+</div>' width='60%'></img>
+</div>
+
+</li><li>
+Click <b>View</b> in the menu bar and select "<b>Image</b>" in the drop-down list, and switch to image view.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/25-image.webp' alt='<div>
+Color image view.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+Double click the work area, and open the image downloaded above.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/27-initial-image.webp' alt='<div>
+Open the image example.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+Press "<b>Bright Colorful</b>" in <b>extract</b> button box in <b>process</b> window. There are five circle color <b>tags</b> appeared above the image, and the colors of these tags are corresponding to the the colors of the five squares in <b>result</b> window, i.e. a set of colors extracted from the image. You could drag the <b>tags</b> as in color wheel in order to obtain colors at certain locations, if this color set don't satisfy.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/09-bright-colorful.webp' alt='<div>
+Obtain a set of colors from an image.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+Color another image with the colors obtained from this image.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/09-bright-colorful-cube.webp' alt='<div>
+Image example coloring with the color set locating from above image.
+</div>' width='60%'></img>
+</div>
+
+</li></ol>
+
+<h2 id="Example-3-Attaching-the-Created-Color-Set-into-Color-Depot"><a href="#Example-3-Attaching-the-Created-Color-Set-into-Color-Depot" class="headerlink" title="Example 3: Attaching the Created Color Set into Color Depot"></a>Example 3: Attaching the Created Color Set into Color Depot</h2><ol><li>
+Open the installed software DigitalPalette.
+
+</li><li>
+creating a set of colors from a color wheel, or locating a set of colors from a color image.
+
+</li><li>
+Click <b>View</b> in the menu bar and select "<b>Depot</b>" in the drop-down list, and switch to depot view.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/15-depot.webp' alt='<div>
+Color depot view.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+Double click the blank icon at upper left corner, and attach the created color set into depot.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/16-add.webp' alt='<div>
+Attach the created color set into color depot.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+Right click the attached color set icon, and press "<b>Import</b>", "<b>Export</b>", "<b>Delete</b>", "<b>Detail</b>" or "<b>Attach</b>" in the drop-down menu to modify the information of color set. For example, select "<b>Detail</b>" and modify the name (DigiPale Color Set) and description (none) of color set in the dialog, and check the harmony rule (Analogous), creating time (upper) and modifying time (lower) of color set. Click OK once modifying finished.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/17-info.webp' alt='<div>
+Check the information detail of color set.
+</div>' width='80%'></img>
+</div>
+
+</li></ol>
+
+<h1 id="Work-Area"><a href="#Work-Area" class="headerlink" title="Work Area"></a>Work Area</h1><p>Work area is the major place for creating, modifying, storing and checking color sets. Here you could <strong>create</strong> a set of colors from a color <strong>wheel</strong>, <strong>locate</strong> a set of colors from a color <strong>image</strong> and <strong>attach</strong> a set of colors into a color <strong>depot</strong>.</p>
+<h2 id="Creating-a-Set-of-Colors-from-Color-Wheel"><a href="#Creating-a-Set-of-Colors-from-Color-Wheel" class="headerlink" title="Creating a Set of Colors from Color Wheel"></a>Creating a Set of Colors from Color Wheel</h2><p>Color wheel view is the default view of work area as shown as below. You could click “<strong>View</strong>“ in the menu bar and select “<strong>Wheel</strong>“ (or click “<strong>Create</strong>“ in <strong>operation</strong> window) to switch to color wheel view, if your current work area view isn’t color <strong>wheel</strong>.<br>There are five circle color <strong>tags</strong> above the color wheel, corresponding to the five color <strong>squares</strong> in <strong>result</strong> window (where the central color square determins the <strong>major color</strong>). You could change the corresponding colors by dragging the tags, or adjust the sliders of R, G, B or H, S, V in <strong>Result</strong> window to modify the colors accurately. Meanwhile, the position and color of <strong>other tags</strong> on color <strong>wheel</strong> would also changed according to the selected <strong>harmony rule</strong>. The harmony rule could be settled in <strong>rule</strong> window.  </p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/24-wheel.webp' alt='<div>
+Color wheel view.
+</div>' width='80%'></img>
+</div>
+
+<h2 id="Locating-a-Set-of-Colors-from-Color-Image"><a href="#Locating-a-Set-of-Colors-from-Color-Image" class="headerlink" title="Locating a Set of Colors from Color Image"></a>Locating a Set of Colors from Color Image</h2><p>The color image view is shown as below. You could click “<strong>View</strong>“ in the menu bar and select “<strong>Image</strong>“ (or click “<strong>Locate</strong>“ in <strong>operation</strong> window) to switch to color image view, if your current work area view isn’t color <strong>image</strong>.<br>Double click the work area to open an existed color image, and left click anywhere above the image, then a color <strong>tag</strong> corresponding to the color square would appeared at this position. Its color will also change into the corresponding color in image. Meanwhile, the colors of <strong>other squares</strong> would also changed according to the selected <strong>harmony rule</strong>. The harmony rule could be settled in <strong>rule window</strong>. Also, you could try to obtain a set of colors automatically by color <strong>extract</strong> provided in <strong>process</strong> window.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/25-image.webp' alt='<div>
+Color image view.
+</div>' width='80%'></img>
+</div>
+
+<h2 id="Attaching-the-Created-Color-Set-into-Color-Depot"><a href="#Attaching-the-Created-Color-Set-into-Color-Depot" class="headerlink" title="Attaching the Created Color Set into Color Depot"></a>Attaching the Created Color Set into Color Depot</h2><p>The color depot view is shown as below. You could click “<strong>View</strong>“ in the menu bar and select “<strong>Depot</strong>“ (or click “<strong>Attach</strong>“ in <strong>operation</strong> window) to switch to color depot view, if your current work area view isn’t color <strong>depot</strong>.<br>Double click the blank icon to attach your created color set into color depot. Each <strong>icon</strong> in color depot includes five color squares, which are corresponding to the five colors of color set, where the color of central square represents the <strong>major color</strong>. You could right click any icon, and press “<strong>Import</strong>“, “<strong>Export</strong>“, “<strong>Delete</strong>“, “<strong>Detail</strong>“ or “<strong>Attach</strong>“ in the drop-down menu to modify the information of color set.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/26-depot.webp' alt='<div>
+Color depot view.
+</div>' width='80%'></img>
+</div>
+
+<h1 id="Rule-Window"><a href="#Rule-Window" class="headerlink" title="Rule Window"></a>Rule Window</h1><p>You could set the harmony and synchronization rules for color set in rule window.</p>
+<h2 id="Harmony-Rule"><a href="#Harmony-Rule" class="headerlink" title="Harmony Rule"></a>Harmony Rule</h2><p>The harmony rule controls the collocation method of colors.</p>
+<ul>
+<li>Analogous<br>Analogous set contains colors with same included angles between two closing tags on color wheel. Colors of analogous set usually mix well with each other harmoniously and pleasantly. Analogous colors are shown as below.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/01-analogous.webp' alt='<div>
+Analogous rule.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the analogous colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/01-analogous-cube.webp' alt='<div>
+Analogous coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Monochromatic<br>Analogous set contains colors with same hue (H) but different saturation (S) and lightness value (V) on color wheel. Colors of monochromatic set usually produce a relaxed effect. Monochromatic colors are shown as below.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/02-monochromatic.webp' alt='<div>
+Monochromatic rule.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the monochromatic colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/02-monochromatic-cube.webp' alt='<div>
+Monochromatic coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Triad<br>Analogous set contains colors with included angles in three equidistant on color wheel. Colors of triad set could generate a contrast effect but not as strong as complementary colors. Triad colors are shown as below.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/03-triad.webp' alt='<div>
+Triad rule.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the triad colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/03-triad-cube.webp' alt='<div>
+Triad coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Tetrad<br>Tetrad set contains two group of colors opposite to each other on color wheel. Colors of tetrad set could generate a contrast effect and form comparisons between cold and warm. Tetrad colors are shown as below.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/04-tetrad.webp' alt='<div>
+Tetrad rule.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the triad colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/04-tetrad-cube.webp' alt='<div>
+Tetrad coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Pentad<br>Analogous set contains colors uniformly distributed on color wheel. Colors of pentad set could give images rhythms. Pentad colors are shown as below.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/05-pentad.webp' alt='<div>
+Pentad rule.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the pentad colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/05-pentad-cube.webp' alt='<div>
+Pentad coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Complementary<br>Complementary set contains colors opposite to each other on color wheel. Colors of complementary set usually generate a great contrast effect and become prominent when putting together, and may even cause the color instability in the case of high saturation. Complementary colors are shown as below.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/06-complementary.webp' alt='<div>
+Complementary rule.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the complementary colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/06-complementary-cube.webp' alt='<div>
+Complementary coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Shades<br>Shades set contains colors with same hue (H) and saturation (S) but different lightness value (V) on color wheel. Colors of shades set usually produce a relaxed effect similarly. Shades colors are shown as below.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/07-shades.webp' alt='<div>
+Shades rule.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the shades colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/07-shades-cube.webp' alt='<div>
+Shades coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Custom<br>Custom set allows you to define each color mannually without the constraint of rules, and generate the expected effect. Custom colors are shown as below.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/08-custom.webp' alt='<div>
+Custom rule.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the custom colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/08-custom-cube.webp' alt='<div>
+Custom coloring.
+</div>' width='60%'></img>
+</div>
+
+<h2 id="Synchro-Rule"><a href="#Synchro-Rule" class="headerlink" title="Synchro Rule"></a>Synchro Rule</h2><p>Synchro rule controls the moving actions of color tags.</p>
+<ul>
+<li><p>Unlimited</p>
+</li>
+<li><p>Fix H</p>
+</li>
+<li><p>Fix S</p>
+</li>
+<li><p>Equidistant</p>
+</li>
+</ul>
+<h1 id="Operation-Window"><a href="#Operation-Window" class="headerlink" title="Operation Window"></a>Operation Window</h1><p>You could perform file and view operations in operation window.</p>
+<h2 id="File-Operation"><a href="#File-Operation" class="headerlink" title="File Operation"></a>File Operation</h2><p>After collocating a set of colors, you could <strong>export</strong> or <strong>save</strong> the color set in <strong>result</strong> window or all color sets in <strong>depot</strong> as readable and writable files or files in other formats for later backups and usages. You could also <strong>import</strong> or <strong>open</strong> existed color files in software.</p>
+<ul>
+<li>Open<br>Open a color depot file in software. The supported <strong>file formats</strong> include: DigiPale Depot File (*.dpc) and DigiPale Json File (*.json).</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/19-open.webp' alt='<div>
+Open a color depot file.
+</div>' width='80%'></img>
+</div>
+
+<ul>
+<li>Save<br>Save the color depot as local file. The supported <strong>file formats</strong> include: DigiPale Depot File (*.dpc), Plain Text File (*.txt), Adobe Swatch File (*.aco), GIMP Palette File (*.gpl) and Pencil Palette File (*.xml).</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/18-save.webp' alt='<div>
+Save a color depot file.
+</div>' width='80%'></img>
+</div>
+
+<ul>
+<li>Import<br>Import a color set file in software. The supported <strong>file formats</strong> include: DigiPale Set File (*.dps) and DigiPale Json File (*.json).</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/21-import.webp' alt='<div>
+Import a color set file.
+</div>' width='80%'></img>
+</div>
+
+<ul>
+<li>Export<br>Export the color set as local file. The supported <strong>file formats</strong> include: DigiPale Set File (*.dps), Plain Text File (*.txt), Adobe Swatch File (*.aco), GIMP Palette File (*.gpl) and Pencil Palette File (*.xml).</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/20-export.webp' alt='<div>
+Export a color set file.
+</div>' width='80%'></img>
+</div>
+
+<h2 id="View-Operation"><a href="#View-Operation" class="headerlink" title="View Operation"></a>View Operation</h2><p>By means of inner view operations, you could switch to color <strong>wheel</strong> view to <strong>create</strong> a set of colors, or switch to color <strong>image</strong> view to <strong>locate</strong> a set of colors, or <strong>attach</strong> a set of colors into the color <strong>depot</strong>. For more details, please see <a href="#Work-Area"><strong>Work Area</strong></a>.</p>
+<h1 id="Process-Window"><a href="#Process-Window" class="headerlink" title="Process Window"></a>Process Window</h1><p>You could apply extract, filter, snap, crop and zoom processes to image in process window.</p>
+<h2 id="Extract-Process"><a href="#Extract-Process" class="headerlink" title="Extract Process"></a>Extract Process</h2><p>You could <strong>locate</strong> a set of colors automatically by using the functions of extract processes. Meanwhile, the <strong>harmony rule</strong> will change into <strong>custom</strong> automatically.</p>
+<ul>
+<li>Bright Colorful<br>The color set extracted from an image are mainly bright colors and supplemented by light or dark colors, reflecting the diversity of colors.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/09-bright-colorful.webp' alt='<div>
+Extract bright colorful colors.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the bright colorful colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/09-bright-colorful-cube.webp' alt='<div>
+Bright colorful coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Light Colorful<br>The color set extracted from an image are mainly light colors and supplemented by dark colors, reflecting the diversity of colors.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/10-light-colorful.webp' alt='<div>
+Extract light colorful colors.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the light colorful colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/10-light-colorful-cube.webp' alt='<div>
+Light colorful coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Dark Colorful<br>The color set extracted from an image are mainly dark colors and supplemented by light colors, reflecting the diversity of colors.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/11-dark-colorful.webp' alt='<div>
+Extract dark colorful colors.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the dark colorful colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/11-dark-colorful-cube.webp' alt='<div>
+Dark colorful coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Bright<br>Extract bright colors from an image, reflecting the homogeneity of colors.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/12-bright.webp' alt='<div>
+Extract bright colors.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the bright colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/12-bright-cube.webp' alt='<div>
+Bright coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Light<br>Extract light colors from an image, reflecting the homogeneity of colors.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/13-light.webp' alt='<div>
+Extract light colors.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the light colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/13-light-cube.webp' alt='<div>
+Light coloring.
+</div>' width='60%'></img>
+</div>
+
+<ul>
+<li>Dark<br>Extract dark colors from an image, reflecting the homogeneity of colors.</li>
+</ul>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/14-dark.webp' alt='<div>
+Extract dark colors.
+</div>' width='80%'></img>
+</div>
+
+<p>Image example coloring with the dark colors.</p>
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/14-dark-cube.webp' alt='<div>
+Dark coloring.
+</div>' width='60%'></img>
+</div>
+
+<h2 id="Filter-Process"><a href="#Filter-Process" class="headerlink" title="Filter Process"></a>Filter Process</h2><p>In order to preferably locate colors in image, you could improve the image quality by using functions of filter processes. Note that the filter processes are irreversibility.</p>
+<h1 id="Mode-Window"><a href="#Mode-Window" class="headerlink" title="Mode Window"></a>Mode Window</h1><p>You could set the display modes for color set results in mode window.</p>
+<h2 id="Display-Mode"><a href="#Display-Mode" class="headerlink" title="Display Mode"></a>Display Mode</h2><p>In display mode, you could show or hide the sliders of R, G, B or H, S, V in <strong>result</strong> window.</p>
+<ul>
+<li><p>RGB</p>
+</li>
+<li><p>HSV</p>
+</li>
+</ul>
+<h1 id="Result-Window"><a href="#Result-Window" class="headerlink" title="Result Window"></a>Result Window</h1><p>Result window contains five color squares, and the colors of squares are corresponding to the colors of tags on color wheel. Double click a color square and you could modify the color directly in the opened dialog. Simultaneously, the tags on color wheel will be also changed. Additionally, the opened dialog provides a function to pick screen color, which could obtain the colors of other windows in current screen directly.</p>
+<p>There are hex code strings, RGB sliders and HSV sliders below five squares, which could also change the colors directly. Also, you could show or hide the sliders by <a href="#Mode-Window"><strong>Mode Window</strong></a>.</p>
+<h1 id="Shortcuts"><a href="#Shortcuts" class="headerlink" title="Shortcuts"></a>Shortcuts</h1><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><b>Work Area</b></td>
+<td><b>-</b></td>
+<td><b>-</b></td>
+</tr>
+<tr>
+<td>Import</td>
+<td>Import a color set file.</td>
+<td>Alt+I; Ctrl+I</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>Export a color set file.</td>
+<td>Alt+E; Ctrl+E</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Open a color depot file.</td>
+<td>Alt+O; Ctrl+O</td>
+</tr>
+<tr>
+<td>Save</td>
+<td>Save a color depot file.</td>
+<td>Alt+S; Ctrl+S</td>
+</tr>
+<tr>
+<td>Quit</td>
+<td>Quit software.</td>
+<td>Alt+Q; Esc</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>Set settings.</td>
+<td>Alt+T; `</td>
+</tr>
+<tr>
+<td>Create</td>
+<td>Switch into color wheel view or (and) create a set of colors from wheel.</td>
+<td>Alt+C; Ctrl+W</td>
+</tr>
+<tr>
+<td>Locate</td>
+<td>Switch into color image view or (and) locate a set of colors from image.</td>
+<td>Alt+L; Ctrl+G</td>
+</tr>
+<tr>
+<td>Attach</td>
+<td>Switch into color depot view or (and) attach a set of colors into depot.</td>
+<td>Alt+A; Ctrl+D</td>
+</tr>
+<tr>
+<td>Homepage</td>
+<td>Open the homepage website through web browser.</td>
+<td>Alt+H; F1</td>
+</tr>
+<tr>
+<td>Update</td>
+<td>Search for software updates through web browser.</td>
+<td>Alt+U; F2</td>
+</tr>
+<tr>
+<td>About</td>
+<td>Display information relative to this software.</td>
+<td>Alt+B; F3</td>
+</tr>
+<tr>
+<td><b>Result Area</b></td>
+<td><b>-</b></td>
+<td><b>-</b></td>
+</tr>
+<tr>
+<td>Copy Tagged RGB</td>
+<td>Copy the RGB value (single) tagged by color tag into system clipboard.</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Copy Tagged HSV</td>
+<td>Copy the HSV value (single) tagged by color tag into system clipboard.</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Copy Tagged Hex</td>
+<td>Copy the Hex code (single) tagged by color tag into system clipboard.</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Copy RGB Result</td>
+<td>Copy all RGB values (five) in result into system clipboard.</td>
+<td>Shift+R</td>
+</tr>
+<tr>
+<td>Copy HSV Result</td>
+<td>Copy all HSV values (five) in result into system clipboard.</td>
+<td>Shift+H</td>
+</tr>
+<tr>
+<td>Copy Hex Result</td>
+<td>Copy all RGB codes (five) in result into system clipboard.</td>
+<td>Shift+X</td>
+</tr>
+<tr>
+<td>Activate Tag</td>
+<td>Activate the corresponding color tag in color wheel.</td>
+<td>1 ~ 5; 6 ~ 0</td>
+</tr>
+<tr>
+<td><b>Depot Area</b></td>
+<td><b>-</b></td>
+<td><b>-</b></td>
+</tr>
+<tr>
+<td>Copy Current RGB</td>
+<td>Copy the RGB values (five) selected in depot into system clipboard.</td>
+<td>Ctrl+R</td>
+</tr>
+<tr>
+<td>Copy Current HSV</td>
+<td>Copy the RGB values (five) selected in depot into system clipboard.</td>
+<td>Ctrl+H</td>
+</tr>
+<tr>
+<td>Copy Current Hex</td>
+<td>Copy the RGB values (five) selected in depot into system clipboard.</td>
+<td>Ctrl+X</td>
+</tr>
+<tr>
+<td>Delete from Depot</td>
+<td>Delete the selected color set from depot.</td>
+<td>Delete; D</td>
+</tr>
+<tr>
+<td>Insert into Depot</td>
+<td>Attach the color set in result area into depot or import the selected color set into result area.</td>
+<td>Insert; I</td>
+</tr>
+<tr>
+<td>Show Detail Info</td>
+<td>Show detail information about currently selected color set.</td>
+<td>Enter; F</td>
+</tr>
+<tr>
+<td><b>Move Actions</b></td>
+<td><b>-</b></td>
+<td><b>-</b></td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Move the opened image.</td>
+<td>↑; ↓; ←; →</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Zoom the opened image.</td>
+<td>-; =; _; +; /; *</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>Reset the position and size of image.</td>
+<td>Home</td>
+</tr>
+</tbody></table>
+<h1 id="Common-Questions"><a href="#Common-Questions" class="headerlink" title="Common Questions"></a>Common Questions</h1><h2 id="How-to-change-the-interface-language"><a href="#How-to-change-the-interface-language" class="headerlink" title="How to change the interface language?"></a>How to change the interface language?</h2><ol><li>
+Click "<b>Edit</b>" in the menu bar and select "<b>Settings</b>", and open the settings dialog.
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/22-settings.webp' alt='<div>
+Settings interface.
+</div>' width='60%'></img>
+</div>
+
+</li><li>
+Click the "<b>Software</b>" tab and select the target language in the drop-down menu beside "<b>Language</b>".
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/23-language.webp' alt='<div>
+Change the language.
+</div>' width='60%'></img>
+</div>
+
+</li></ol>
+
+<h2 id="How-to-export-color-set-file-and-import-it-into-other-image-processors"><a href="#How-to-export-color-set-file-and-import-it-into-other-image-processors" class="headerlink" title="How to export color set file and import it into other image processors?"></a>How to export color set file and import it into other image processors?</h2><ol><li>
+Click "<b>Export</b>" in <b>file</b> button box in <b>operation</b> window, and export this color set as a Adobe swatch file (\*.aco).
+
+<div style="text-align:center; margin: 1.2em"><img src='https://gitee.com/eigenmiao/digipale/raw/master/tutorials/images/en/28-export-aco.webp' alt='<div>
+Export the color set.
+</div>' width='80%'></img>
+</div>
+
+</li><li>
+For Adobe Photoshop: Firstly, open Adobe Photoshop and select "Load" in swatch box and open the file dialog. Then, find the pre-saved swatch file and click "Open". The harmonious colors would be added to the end of current swatch.
+
+</li><li>
+For GIMP: Firstly, open GIMP and select "Import Palette" with right-buttom cliced in colormap and open the import dialog. Then, find the pre-saved swatch file and click "Import".
+
+</li><li>
+For Clip Studio Paint (or UDongman Paint): Firstly, open UDongman Paint and select "Load" in swatch box and open the file dialog. Then, find the pre-saved swatch file and click "Open". The harmonious colors would be opened in a new swatch.
+
+</li></ol>
+
+<h1 id="Copyright"><a href="#Copyright" class="headerlink" title="Copyright"></a>Copyright</h1><div><span>Copyright © 2019-2020 </span><span title="Send me a mail"><script>var name='eigenmiao'; var extn='outlook.com'; document.write('<a href="mailto:' + name + '@' + extn + '">Eigenmiao</a>')</script></span>. All Rights Reserved.</div>
+
+<h1 id="License"><a href="#License" class="headerlink" title="License"></a>License</h1><p>DigitalPalette is a free software, which is distributed in the hope that it will be useful, but without any warranty. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the <a href="https://www.gnu.org/licenses/" target="_blank" rel="noopener">GNU General Public License 3.0 (GPL 3.0)</a> for more details.</p>
+<p>All images (including <a href="https://github.com/liujiacode/DigitalPalette/tree/master/src/main/icons" target="_blank" rel="noopener">logo</a> and <a href="https://github.com/liujiacode/DigitalPalette/tree/master/src/main/resources" target="_blank" rel="noopener">sample</a> images, etc.), documents and translations in DigitalPalette <a href="https://github.com/liujiacode/DigitalPalette" target="_blank" rel="noopener">code repository</a> are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial-ShareAlike License 4.0 (CC BY-NC-SA 4.0)</a> unless stating additionally.</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:eigenmiao@outlook.com">喵函数</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://eigenmiao.site/2020/05/05/digipale-tutorial-en/">https://eigenmiao.site/2020/05/05/digipale-tutorial-en/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://eigenmiao.site">本征喵的小站</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/DigitalPalette/">DigitalPalette</a><a class="post-meta__tags" href="/tags/Tutorial/">Tutorial</a></div><div class="social-share pull-right"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/05/11/article-11/"><i class="fa fa-chevron-left">  </i><span>文献阅读：11</span></a></div><div class="next-post pull-right"><a href="/2020/05/05/digipale-tutorial-zh/"><span>DigitalPalette 教程</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment" style="margin: 3.0em 1.2em 1.0em 1.2em"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'true' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+var localeName = 'my-own'
+var localeMode = {nick:"姓名",mail:"邮箱",link:"个人主页",nickFail:"姓名不能少于2个字符",mailFail:"请填写正确的邮件地址",sofa:"来发评论吧~",submit:"提交",reply:"回复",cancelReply:"取消回复",comments:"评论",cancel:"取消",confirm:"确认",continue:"继续",more:"加载更多...",preview:"预览",emoji:"表情",expand:"查看更多...",seconds:"秒前",minutes:"分钟前",hours:"小时前",days:"天前",now:"刚刚",uploading:"正在传输...",uploadDone:"传输完成!",busy:"操作频繁，请稍候再试...","code-98":"Valine 初始化失败，请检查 av-min.js 版本","code-99":"Valine 初始化失败，请检查init中的`el`元素.","code-100":"Valine 初始化失败，请检查你的AppId和AppKey.","code-140":"今日 API 调用总次数已超过开发版限制.","code-401":"未经授权的操作，请检查你的AppId和AppKey.","code-403":"访问被API域名白名单拒绝，请检查你的安全域名设置."}
+
+window.valine = new Valine();
+
+window.valine.init({
+  el:'#vcomment',
+  notify:false,
+  verify:true,
+  recordIP:true,
+  enableQQ:true,
+  requiredFields:['mail'],
+  appId:'sVhWBkYRKiYJotRtiVEP9BWA-MdYXbMMI',
+  appKey:'3Kpj3Sgp6egjsyhsg5t8C4Cz',
+  placeholder:'说点什么吧 (●´∀｀●)',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: localeName,
+  langMode: localeMode,
+  emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/emoji/valine/',
+  emojiMaps: {
+    "qq-000": "qq/qq-1.gif",
+    "qq-001": "qq/qq-2.gif",
+    "qq-002": "qq/qq-3.gif",
+    "qq-003": "qq/qq-4.gif",
+    "qq-004": "qq/qq-5.gif",
+    "qq-005": "qq/qq-6.gif",
+    "qq-006": "qq/qq-7.gif",
+    "qq-007": "qq/qq-8.gif",
+    "qq-008": "qq/qq-9.gif",
+    "qq-009": "qq/qq-10.gif",
+    "qq-010": "qq/qq-11.gif",
+    "qq-011": "qq/qq-12.gif",
+    "qq-012": "qq/qq-13.gif",
+    "qq-013": "qq/qq-14.gif",
+    "qq-014": "qq/qq-15.gif",
+    "qq-015": "qq/qq-16.gif",
+    "qq-016": "qq/qq-17.gif",
+    "qq-017": "qq/qq-18.gif",
+    "qq-018": "qq/qq-19.gif",
+    "qq-019": "qq/qq-20.gif",
+    "qq-020": "qq/qq-21.gif",
+    "qq-021": "qq/qq-22.gif",
+    "qq-022": "qq/qq-23.gif",
+    "qq-023": "qq/qq-24.gif",
+    "qq-024": "qq/qq-25.gif",
+    "qq-025": "qq/qq-26.gif",
+    "qq-026": "qq/qq-27.gif",
+    "qq-027": "qq/qq-28.gif",
+    "qq-028": "qq/qq-29.gif",
+    "qq-029": "qq/qq-30.gif",
+    "qq-030": "qq/qq-31.gif",
+    "qq-031": "qq/qq-32.gif",
+    "qq-032": "qq/qq-33.gif",
+    "qq-033": "qq/qq-34.gif",
+    "qq-034": "qq/qq-35.gif",
+    "qq-035": "qq/qq-36.gif",
+    "qq-036": "qq/qq-37.gif",
+    "qq-037": "qq/qq-38.gif",
+    "qq-038": "qq/qq-39.gif",
+    "qq-039": "qq/qq-40.gif",
+    "qq-040": "qq/qq-41.gif",
+    "qq-041": "qq/qq-42.gif",
+    "qq-042": "qq/qq-43.gif",
+    "qq-043": "qq/qq-44.gif",
+    "qq-044": "qq/qq-45.gif",
+    "qq-045": "qq/qq-46.gif",
+    "qq-046": "qq/qq-47.gif",
+    "qq-047": "qq/qq-48.gif",
+    "qq-048": "qq/qq-49.gif",
+    "qq-049": "qq/qq-50.gif",
+    "qq-050": "qq/qq-51.gif",
+    "qq-051": "qq/qq-52.gif",
+    "qq-052": "qq/qq-53.gif",
+    "qq-053": "qq/qq-54.gif",
+    "qq-054": "qq/qq-55.gif",
+    "qq-055": "qq/qq-56.gif",
+    "qq-056": "qq/qq-57.gif",
+    "qq-057": "qq/qq-58.gif",
+    "qq-058": "qq/qq-59.gif",
+    "qq-059": "qq/qq-60.gif",
+    "qq-060": "qq/qq-61.gif",
+    "qq-061": "qq/qq-62.gif",
+    "qq-062": "qq/qq-63.gif",
+    "qq-063": "qq/qq-64.gif",
+    "qq-064": "qq/qq-65.gif",
+    "qq-065": "qq/qq-66.gif",
+    "qq-066": "qq/qq-67.gif",
+    "qq-067": "qq/qq-68.gif",
+    "qq-068": "qq/qq-69.gif",
+    "qq-069": "qq/qq-70.gif",
+    "qq-070": "qq/qq-71.gif",
+    "qq-071": "qq/qq-72.gif",
+    "qq-072": "qq/qq-73.gif",
+    "qq-073": "qq/qq-74.gif",
+    "qq-074": "qq/qq-75.gif",
+    "qq-075": "qq/qq-76.gif",
+    "qq-076": "qq/qq-77.gif",
+    "qq-077": "qq/qq-78.gif",
+    "qq-078": "qq/qq-79.gif",
+    "qq-079": "qq/qq-80.gif",
+    "qq-080": "qq/qq-81.gif",
+    "qq-081": "qq/qq-82.gif",
+    "qq-082": "qq/qq-83.gif",
+    "qq-083": "qq/qq-84.gif",
+    "qq-084": "qq/qq-85.gif",
+    "qq-085": "qq/qq-86.gif",
+    "qq-086": "qq/qq-87.gif",
+    "qq-087": "qq/qq-88.gif",
+    "qq-088": "qq/qq-89.gif",
+    "qq-089": "qq/qq-90.gif",
+    "qq-090": "qq/qq-91.gif",
+    "qq-091": "qq/qq-92.gif",
+    "qq-092": "qq/qq-93.gif",
+    "qq-093": "qq/qq-94.gif",
+    "qq-094": "qq/qq-95.gif",
+    "qq-095": "qq/qq-96.gif",
+    "qq-096": "qq/qq-97.gif",
+    "qq-097": "qq/qq-98.gif",
+    "qq-098": "qq/qq-99.gif",
+    "qq-099": "qq/qq-100.gif",
+    "qq-100": "qq/qq-101.gif",
+    "tieba-000": "tieba/tieba-1.png",
+    "tieba-001": "tieba/tieba-2.png",
+    "tieba-002": "tieba/tieba-3.png",
+    "tieba-003": "tieba/tieba-4.png",
+    "tieba-004": "tieba/tieba-5.png",
+    "tieba-005": "tieba/tieba-6.png",
+    "tieba-006": "tieba/tieba-7.png",
+    "tieba-007": "tieba/tieba-8.png",
+    "tieba-008": "tieba/tieba-9.png",
+    "tieba-009": "tieba/tieba-10.png",
+    "tieba-010": "tieba/tieba-11.png",
+    "tieba-011": "tieba/tieba-12.png",
+    "tieba-012": "tieba/tieba-13.png",
+    "tieba-013": "tieba/tieba-14.png",
+    "tieba-014": "tieba/tieba-15.png",
+    "tieba-015": "tieba/tieba-16.png",
+    "tieba-016": "tieba/tieba-17.png",
+    "tieba-017": "tieba/tieba-18.png",
+    "tieba-018": "tieba/tieba-19.png",
+    "tieba-019": "tieba/tieba-20.png",
+    "tieba-020": "tieba/tieba-21.png",
+    "tieba-021": "tieba/tieba-22.png",
+    "tieba-022": "tieba/tieba-23.png",
+    "tieba-023": "tieba/tieba-24.png",
+    "tieba-024": "tieba/tieba-25.png",
+    "tieba-025": "tieba/tieba-26.png",
+    "tieba-026": "tieba/tieba-27.png",
+    "tieba-027": "tieba/tieba-28.png",
+    "tieba-028": "tieba/tieba-29.png",
+    "tieba-029": "tieba/tieba-30.png",
+    "tieba-030": "tieba/tieba-31.png",
+    "tieba-031": "tieba/tieba-32.png",
+    "tieba-032": "tieba/tieba-33.png",
+    "tieba-033": "tieba/tieba-34.png",
+    "tieba-034": "tieba/tieba-35.png",
+    "tieba-035": "tieba/tieba-36.png",
+    "tieba-036": "tieba/tieba-37.png",
+    "tieba-037": "tieba/tieba-38.png",
+    "tieba-038": "tieba/tieba-39.png",
+    "tieba-039": "tieba/tieba-40.png",
+    "tieba-040": "tieba/tieba-41.png",
+    "tieba-041": "tieba/tieba-42.png",
+    "tieba-042": "tieba/tieba-43.png",
+    "tieba-043": "tieba/tieba-44.png",
+    "tieba-044": "tieba/tieba-45.png",
+    "tieba-045": "tieba/tieba-46.png",
+    "tieba-046": "tieba/tieba-47.png",
+    "tieba-047": "tieba/tieba-48.png",
+    "tieba-048": "tieba/tieba-49.png",
+    "tieba-049": "tieba/tieba-50.png",
+    "tieba-050": "tieba/tieba-51.png",
+    "tieba-051": "tieba/tieba-52.png",
+    "tieba-052": "tieba/tieba-53.png",
+    "tieba-053": "tieba/tieba-54.png",
+    "twemoji-000": "twemoji/twemoji-1.png",
+    "twemoji-001": "twemoji/twemoji-2.png",
+    "twemoji-002": "twemoji/twemoji-3.png",
+    "twemoji-003": "twemoji/twemoji-4.png",
+    "twemoji-004": "twemoji/twemoji-5.png",
+    "twemoji-005": "twemoji/twemoji-6.png",
+    "twemoji-006": "twemoji/twemoji-7.png",
+    "twemoji-007": "twemoji/twemoji-8.png",
+    "twemoji-008": "twemoji/twemoji-9.png",
+    "twemoji-009": "twemoji/twemoji-10.png",
+    "twemoji-010": "twemoji/twemoji-11.png",
+    "twemoji-011": "twemoji/twemoji-12.png",
+    "twemoji-012": "twemoji/twemoji-13.png",
+    "twemoji-013": "twemoji/twemoji-14.png",
+    "twemoji-014": "twemoji/twemoji-15.png",
+    "twemoji-015": "twemoji/twemoji-16.png",
+    "twemoji-016": "twemoji/twemoji-17.png",
+    "twemoji-017": "twemoji/twemoji-18.png",
+    "twemoji-018": "twemoji/twemoji-19.png",
+    "twemoji-019": "twemoji/twemoji-20.png",
+    "twemoji-020": "twemoji/twemoji-21.png",
+    "twemoji-021": "twemoji/twemoji-22.png",
+    "twemoji-022": "twemoji/twemoji-23.png",
+    "twemoji-023": "twemoji/twemoji-24.png",
+    "twemoji-024": "twemoji/twemoji-25.png",
+    "twemoji-025": "twemoji/twemoji-26.png",
+    "twemoji-026": "twemoji/twemoji-27.png",
+    "twemoji-027": "twemoji/twemoji-28.png",
+    "twemoji-028": "twemoji/twemoji-29.png",
+    "twemoji-029": "twemoji/twemoji-30.png",
+    "twemoji-030": "twemoji/twemoji-31.png",
+    "twemoji-031": "twemoji/twemoji-32.png",
+    "twemoji-032": "twemoji/twemoji-33.png",
+    "twemoji-033": "twemoji/twemoji-34.png",
+    "twemoji-034": "twemoji/twemoji-35.png",
+    "twemoji-035": "twemoji/twemoji-36.png",
+    "twemoji-036": "twemoji/twemoji-37.png",
+    "twemoji-037": "twemoji/twemoji-38.png",
+    "twemoji-038": "twemoji/twemoji-39.png",
+    "twemoji-039": "twemoji/twemoji-40.png",
+    "twemoji-040": "twemoji/twemoji-41.png",
+    "twemoji-041": "twemoji/twemoji-42.png",
+    "twemoji-042": "twemoji/twemoji-43.png",
+    "twemoji-043": "twemoji/twemoji-44.png",
+    "twemoji-044": "twemoji/twemoji-45.png",
+    "twemoji-045": "twemoji/twemoji-46.png",
+    "twemoji-046": "twemoji/twemoji-47.png",
+    "twemoji-047": "twemoji/twemoji-48.png",
+    "twemoji-048": "twemoji/twemoji-49.png",
+    "twemoji-049": "twemoji/twemoji-50.png",
+    "twemoji-050": "twemoji/twemoji-51.png",
+    "twemoji-051": "twemoji/twemoji-52.png",
+    "twemoji-052": "twemoji/twemoji-53.png",
+    "twemoji-053": "twemoji/twemoji-54.png",
+    "twemoji-054": "twemoji/twemoji-55.png",
+    "twemoji-055": "twemoji/twemoji-56.png",
+    "twemoji-056": "twemoji/twemoji-57.png",
+    "twemoji-057": "twemoji/twemoji-58.png",
+    "twemoji-058": "twemoji/twemoji-59.png",
+    "twemoji-059": "twemoji/twemoji-60.png",
+    "twemoji-060": "twemoji/twemoji-61.png",
+    "twemoji-061": "twemoji/twemoji-62.png",
+    "twemoji-062": "twemoji/twemoji-63.png",
+    "twemoji-063": "twemoji/twemoji-64.png",
+    "twemoji-064": "twemoji/twemoji-65.png",
+    "twemoji-065": "twemoji/twemoji-66.png",
+    "twemoji-066": "twemoji/twemoji-67.png",
+    "twemoji-067": "twemoji/twemoji-68.png",
+    "twemoji-068": "twemoji/twemoji-69.png",
+    "twemoji-069": "twemoji/twemoji-70.png",
+    "twemoji-070": "twemoji/twemoji-71.png",
+    "twemoji-071": "twemoji/twemoji-72.png",
+    "twemoji-072": "twemoji/twemoji-73.png",
+    "twemoji-073": "twemoji/twemoji-74.png",
+    "twemoji-074": "twemoji/twemoji-75.png",
+    "twemoji-075": "twemoji/twemoji-76.png",
+    "twemoji-076": "twemoji/twemoji-77.png",
+    "twemoji-077": "twemoji/twemoji-78.png",
+    "twemoji-078": "twemoji/twemoji-79.png",
+    "twemoji-079": "twemoji/twemoji-80.png",
+    "twemoji-080": "twemoji/twemoji-81.png",
+    "twemoji-081": "twemoji/twemoji-82.png",
+    "twemoji-082": "twemoji/twemoji-83.png",
+    "twemoji-083": "twemoji/twemoji-84.png",
+    "twemoji-084": "twemoji/twemoji-85.png",
+    "twemoji-085": "twemoji/twemoji-86.png",
+    "twemoji-086": "twemoji/twemoji-87.png",
+    "twemoji-087": "twemoji/twemoji-88.png",
+    "twemoji-088": "twemoji/twemoji-89.png",
+    "twemoji-089": "twemoji/twemoji-90.png",
+    "twemoji-090": "twemoji/twemoji-91.png",
+    "twemoji-091": "twemoji/twemoji-92.png",
+    "twemoji-092": "twemoji/twemoji-93.png",
+    "twemoji-093": "twemoji/twemoji-94.png",
+    "twemoji-094": "twemoji/twemoji-95.png",
+    "twemoji-095": "twemoji/twemoji-96.png",
+    "twemoji-096": "twemoji/twemoji-97.png",
+    "twemoji-097": "twemoji/twemoji-98.png",
+    "twemoji-098": "twemoji/twemoji-99.png",
+    "twemoji-099": "twemoji/twemoji-100.png",
+    "twemoji-100": "twemoji/twemoji-101.png",
+    "twemoji-101": "twemoji/twemoji-102.png",
+    "twemoji-102": "twemoji/twemoji-103.png",
+    "twemoji-103": "twemoji/twemoji-104.png",
+    "twemoji-104": "twemoji/twemoji-105.png",
+    "twemoji-105": "twemoji/twemoji-106.png",
+    "twemoji-106": "twemoji/twemoji-107.png",
+    "twemoji-107": "twemoji/twemoji-108.png",
+    "twemoji-108": "twemoji/twemoji-109.png",
+    "twemoji-109": "twemoji/twemoji-110.png",
+    "twemoji-110": "twemoji/twemoji-111.png",
+    "twemoji-111": "twemoji/twemoji-112.png",
+    "twemoji-112": "twemoji/twemoji-113.png",
+    "twemoji-113": "twemoji/twemoji-114.png",
+    "twemoji-114": "twemoji/twemoji-115.png",
+    "twemoji-115": "twemoji/twemoji-116.png",
+    "twemoji-116": "twemoji/twemoji-117.png",
+    "twemoji-117": "twemoji/twemoji-118.png",
+    "twemoji-118": "twemoji/twemoji-119.png",
+    "twemoji-119": "twemoji/twemoji-120.png",
+    "twemoji-120": "twemoji/twemoji-121.png",
+    "twemoji-121": "twemoji/twemoji-122.png",
+    "twemoji-122": "twemoji/twemoji-123.png",
+    "twemoji-123": "twemoji/twemoji-124.png",
+    "twemoji-124": "twemoji/twemoji-125.png",
+  },
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2020 - 2021 By 喵函数</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
