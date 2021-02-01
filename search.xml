@@ -8,7 +8,7 @@
       <link href="/2020/11/16/toc-graph/"/>
       <url>/2020/11/16/toc-graph/</url>
       
-        <content type="html"><![CDATA[<div style='text-align: left; font-size: normal'>文章发出来了，放张之前没用上的图片摘要。<img src='https://gitee.com/eigenmiao/emos/raw/master/tieba/tieba-16.png' class='no-fancybox nobrd' style='height: 1.2rem; padding: 0px; vertical-align: text-bottom'></img></div><a id="more"></a><h1 id="图片摘要"><a href="#图片摘要" class="headerlink" title="图片摘要"></a>图片摘要</h1><div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/def97f2d9c5cbe5bc88a2d14c3a899ad.webp' data-briefinfo='<div>图片摘要。</div>' alt='<div>图片摘要。</div>' width='100%'></img></div><br/><h1 id="渲染模型"><a href="#渲染模型" class="headerlink" title="渲染模型"></a>渲染模型</h1><div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/5dfb6c9c264d459b45eb8d99042895d9.webp' data-briefinfo='<div>渲染模型。</div>' alt='<div>渲染模型。</div>' width='100%'></img></div><br/>]]></content>
+        <content type="html"><![CDATA[<div style='text-align: left; font-size: normal'>放张之前没用上的图片摘要。<img src='https://gitee.com/eigenmiao/emos/raw/master/tieba/tieba-16.png' class='no-fancybox nobrd' style='height: 1.2rem; padding: 0px; vertical-align: text-bottom'></img></div><a id="more"></a><h1 id="图片摘要"><a href="#图片摘要" class="headerlink" title="图片摘要"></a>图片摘要</h1><div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/def97f2d9c5cbe5bc88a2d14c3a899ad.webp' data-briefinfo='<div>图片摘要。</div>' alt='<div>图片摘要。</div>' width='100%'></img></div><br/><h1 id="渲染模型"><a href="#渲染模型" class="headerlink" title="渲染模型"></a>渲染模型</h1><div><img src='https://gitee.com/eigenmiao/imgs/raw/master/webp/5dfb6c9c264d459b45eb8d99042895d9.webp' data-briefinfo='<div>渲染模型。</div>' alt='<div>渲染模型。</div>' width='100%'></img></div><br/>]]></content>
       
       
       <categories>
@@ -135,35 +135,6 @@
             <tag> CALYPSO </tag>
             
             <tag> 教程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>文献阅读：11</title>
-      <link href="/2020/05/11/article-11/"/>
-      <url>/2020/05/11/article-11/</url>
-      
-        <content type="html"><![CDATA[<p>标题：Coplanar semiconductor–metal circuitry defined on few-layer MoTe<sub>2</sub> via polymorphic heteroepitaxy<br>作者：Ji Ho Sung, Hoseok Heo, Saerom Si, Yong Hyeon Kim, Hyeong Rae Noh, Kyung Song, Juho Kim, Chang-Soo Lee, Seung-Young Seo, Dong-Hwi Kim, Hyoung Kug Kim, Han Woong Yeom, Tae-Hwan Kim, Si-Young Choi, Jun Sung Kim and Moon-Ho Jo<br>期刊：Nature Nanotechnology<br>日期：2017</p><a id="more"></a><p>简介：这是一篇关于平面异质结的文献，标题为“通过多晶异质外延生长方法限定在少数层 MoTe<sub>2</sub> 上的共面半导体-金属电路”。</p><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><blockquote><p>Crystal polymorphism selectively stabilizes the electronic phase of atomically thin transition-metal dichalcogenides (TMDCs) as metallic or semiconducting, suggesting the potential to integrate these polymorphs as circuit components in two-dimensional electronic circuitry. Developing a selective and sequential growth strategy for such two-dimensional polymorphs in the vapour phase is a critical step in this endeavour. Here, we report on the polymorphic integration of distinct metallic (1T′) and semiconducting (2H) MoTe<sub>2</sub> crystals within the same atomic planes by heteroepitaxy. The realized polymorphic coplanar contact is atomically coherent, and its barrier potential is spatially tight-confined over a length of only a few nanometres, with a lowest contact barrier height of $\sim 25\ \rm{meV}$. We also demonstrate the generality of our synthetic integration approach for other TMDC polymorph films with large areas.</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 翻译 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 文献 </tag>
-            
-            <tag> 多晶 </tag>
-            
-            <tag> 外延生长 </tag>
             
         </tags>
       
@@ -430,9 +401,9 @@
             
             <tag> 密度泛函理论 </tag>
             
-            <tag> 肖特基接触 </tag>
-            
             <tag> 势垒晶体管 </tag>
+            
+            <tag> 肖特基接触 </tag>
             
         </tags>
       
@@ -465,13 +436,13 @@
             
             <tag> 二维材料 </tag>
             
-            <tag> 费米能级钉扎 </tag>
-            
             <tag> 从头计算器件模拟 </tag>
             
             <tag> 界面 </tag>
             
             <tag> 传输长度 </tag>
+            
+            <tag> 费米能级钉扎 </tag>
             
         </tags>
       
