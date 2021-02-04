@@ -9,5 +9,3 @@ Disallow: /article*
 Disallow: /ad*
 Disallow: /*article*
 Disallow: /*ad*
-Disallow: article*
-Disallow: ad*
