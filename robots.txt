@@ -7,5 +7,7 @@ Disallow: /404/*
 Disallow: /about/*
 Disallow: /article*
 Disallow: /ad*
+Disallow: /*article*
+Disallow: /*ad*
 Disallow: article*
 Disallow: ad*
