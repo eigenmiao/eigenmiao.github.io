@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /404
+Disallow: /about
+Disallow: /404/
+Disallow: /about/
+Disallow: /404/*
+Disallow: /about/*
+Disallow: /yanhuo/support*
+Disallow: /rickrack/support*
+Disallow: /article*
+Disallow: /ad*
+Disallow: /support*
+Disallow: /*article*
+Disallow: /*ad*
+Disallow: /*support*
